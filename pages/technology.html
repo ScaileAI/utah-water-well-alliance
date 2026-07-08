@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Well Drilling Technology | Utah Water Well Alliance</title>
+  <meta name="description" content="Utah Water Well Alliance uses industry-leading drilling technology — hydraulic rotary rigs, VFD pump systems, digital well logging, and fiber optic camera inspection for Southern Utah wells.">
+  <meta name="keywords" content="well drilling technology utah, VFD pump systems utah, digital well logging, well camera inspection, rotary drilling rig southern utah">
+  <link rel="canonical" href="https://utahwaterwellalliance.com/pages/technology.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .tech-section-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    .tech-section-grid.reverse { direction: rtl; }
+    .tech-section-grid.reverse > * { direction: ltr; }
+    @media (max-width: 768px) {
+      .tech-section-grid, .tech-section-grid.reverse { grid-template-columns: 1fr; direction: ltr; }
+    }
+    .tech-visual-block {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 280px;
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .tech-visual-block::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 180px; height: 180px;
+      background: rgba(212,98,26,0.12);
+      border-radius: 50%;
+    }
+    .tech-visual-icon {
+      width: 72px; height: 72px;
+      background: rgba(212,98,26,0.18);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--orange-light);
+      margin-bottom: 1.25rem;
+      position: relative;
+    }
+    .tech-visual-block h3 { color: white; font-size: 1.4rem; margin-bottom: 0.5rem; }
+    .tech-visual-block p { color: rgba(255,255,255,0.72); font-size: 0.9rem; margin: 0; max-width: 260px; }
+    .tech-content h2 { margin-bottom: 1rem; }
+    .tech-content p { color: var(--dark-gray); line-height: 1.75; margin-bottom: 1rem; }
+    .tech-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1.25rem; }
+    .tech-bullets li {
+      display: flex; align-items: flex-start; gap: 0.75rem;
+      font-size: 0.93rem; color: var(--dark-gray);
+    }
+    .tech-bullets li::before {
+      content: '▸';
+      color: var(--orange);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .vfd-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    @media (max-width: 900px) { .vfd-stats-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .vfd-stats-grid { grid-template-columns: 1fr; } }
+    .vfd-stat-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .vfd-stat-card .t-num { font-size: 2.2rem; font-weight: 800; color: var(--orange-light); display: block; line-height: 1; }
+    .vfd-stat-card .t-label { color: rgba(255,255,255,0.75); font-size: 0.82rem; margin-top: 0.4rem; display: block; line-height: 1.4; }
+    .vfd-content { max-width: 680px; }
+    .vfd-content h2 { color: white; margin-bottom: 1rem; }
+    .vfd-content .section-label { color: var(--orange-light); }
+    .vfd-content p { color: rgba(255,255,255,0.8); line-height: 1.75; }
+    .tech-badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: rgba(196,146,42,0.15);
+      border: 1px solid rgba(196,146,42,0.3);
+      color: var(--gold);
+      font-size: 0.78rem; font-weight: 600;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="emergency-bar">
+    🚨 Well Emergency? We Respond 24/7 — <a href="tel:+14358009355" data-phone>(435) 800-WELL</a>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo">
+        <img src="../images/logo.png" alt="Utah Water Well Alliance Logo" class="logo-img">
+        <div class="logo-text">
+          <span class="logo-main">Utah Water Well Alliance</span>
+          <span class="logo-sub">Southern Utah's Well Experts</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="../index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="technology.html" class="active">Technology</a>
+        <a href="emergency.html">Emergency</a>
+        <a href="utah-well-guide.html">Well Permit Guide</a>
+        <a href="service-areas.html">Service Areas</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="tel:+14358009355" class="nav-phone" data-phone>(435) 800-WELL</a>
+        <a href="contact.html" class="btn btn-primary">Free Quote</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Technology</span>
+      </div>
+      <h1>Industry-Leading Technology for Southern Utah Wells</h1>
+      <p>Southern Utah's geology demands specialized equipment. From Cedar City's volcanic rock to Kane County's deep limestone formations, we've invested in the right tools for every challenge — so your well gets drilled right the first time.</p>
+    </div>
+  </section>
+
+  <!-- Section 1: Rotary Drilling Rigs -->
+  <section class="section">
+    <div class="container">
+      <div class="tech-section-grid">
+        <div class="tech-visual-block">
+          <div class="tech-visual-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L12 22"/><path d="M8 6L16 6"/><path d="M9 10L15 10"/><path d="M10 14L14 14"/><path d="M7 18Q12 22 17 18"/></svg>
+          </div>
+          <h3>Hydraulic Rotary Rigs</h3>
+          <p>GPS-tracked, 1,000+ foot capacity rigs engineered for Southern Utah's toughest formations</p>
+          <div style="display:flex; gap:1.5rem; margin-top:1.5rem; flex-wrap:wrap; justify-content:center;">
+            <div style="text-align:center;">
+              <span style="font-size:1.8rem; font-weight:800; color:var(--orange-light); display:block;">1,000+</span>
+              <span style="font-size:0.75rem; color:rgba(255,255,255,0.65);">Foot Capacity</span>
+            </div>
+            <div style="text-align:center;">
+              <span style="font-size:1.8rem; font-weight:800; color:var(--orange-light); display:block;">GPS</span>
+              <span style="font-size:0.75rem; color:rgba(255,255,255,0.65);">Tracked Fleet</span>
+            </div>
+            <div style="text-align:center;">
+              <span style="font-size:1.8rem; font-weight:800; color:var(--orange-light); display:block;">24/7</span>
+              <span style="font-size:0.75rem; color:rgba(255,255,255,0.65);">Dispatch Ready</span>
+            </div>
+          </div>
+        </div>
+        <div class="tech-content">
+          <span class="section-label">Drilling Equipment</span>
+          <h2>Modern Hydraulic Rotary Rigs</h2>
+          <p>Our fleet of hydraulic rotary drilling rigs represents the current standard of the industry — built to handle everything Southern Utah's varied geology can throw at them. Whether you're on the red sandstone benches near St. George, the alluvial valleys around Hurricane, or the deep sedimentary layers of Kanab, these rigs are matched to the formation.</p>
+          <p>Every rig in our fleet is GPS-tracked for job site accuracy and dispatched based on formation type and depth requirement. We don't send a light rig to a 600-foot job.</p>
+          <ul class="tech-bullets">
+            <li>1,000+ foot drilling capacity for the deepest Southern Utah aquifers</li>
+            <li>Handles hard sandstone, limestone, basalt, and alluvial sediments</li>
+            <li>GPS-tracked fleet for precise site location and dispatch coordination</li>
+            <li>Hydraulic torque systems reduce formation damage during penetration</li>
+            <li>Compatible with both air and mud rotary drilling methods</li>
+            <li>On-board water recycling systems for environmentally sensitive sites</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Downhole Hammer / Air Rotary -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="tech-section-grid reverse">
+        <div class="tech-visual-block">
+          <div class="tech-visual-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          </div>
+          <h3>Air Rotary / Downhole Hammer</h3>
+          <p>Engineered for Cedar City volcanic rock and Kane County limestone — faster, lower cost per foot</p>
+        </div>
+        <div class="tech-content">
+          <span class="section-label">Hard Rock Drilling</span>
+          <h2>Downhole Hammer &amp; Air Rotary Systems</h2>
+          <p>Cedar City sits atop volcanic geology that will defeat under-equipped drilling operations. Kane County's deep limestone is equally unforgiving. Our downhole hammer and air rotary systems were chosen specifically for Southern Utah's hard rock challenges.</p>
+          <p>The downhole hammer works by driving a pneumatic percussive bit directly into rock with compressed air — delivering faster penetration rates than rotary alone and significantly lower cost per foot in consolidated rock formations. The drill cuttings are simultaneously lifted out of the borehole by the return air, keeping the hole clean and the bit cool.</p>
+          <ul class="tech-bullets">
+            <li>Purpose-built for Cedar City volcanic basalt and Kane County limestone</li>
+            <li>Significantly faster penetration in consolidated rock vs. mud rotary</li>
+            <li>Lower cost per foot — savings passed to the customer</li>
+            <li>Air returns carry cuttings out while drilling — no mud disposal required</li>
+            <li>Compressed air also provides formation assessment during drilling</li>
+            <li>Reduced risk of formation damage in fractured aquifer zones</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: VFD Pump Systems — Navy Spotlight -->
+  <section class="section section--navy">
+    <div class="container">
+      <div class="vfd-content">
+        <span class="section-label" style="color:var(--orange-light)">Premium Pump Technology</span>
+        <h2 style="color:white;">Variable Frequency Drive (VFD) Pump Systems</h2>
+        <p>Standard pressure tanks cycle your pump on and off hundreds of times per day. Every start puts mechanical stress on the motor and draws a surge of electricity. VFD systems eliminate that cycle entirely by modulating pump speed to match your household's real-time water demand — the pump runs slower when demand is low, faster when it's high, and the pressure stays constant throughout.</p>
+        <p>For Southern Utah properties where electricity costs are high and service calls are expensive, VFD systems typically pay for themselves within a few years through energy savings alone — before accounting for reduced maintenance and extended pump life.</p>
+      </div>
+      <div class="vfd-stats-grid">
+        <div class="vfd-stat-card">
+          <span class="t-num">30–50%</span>
+          <span class="t-label">Energy savings vs. conventional pressure tank systems</span>
+        </div>
+        <div class="vfd-stat-card">
+          <span class="t-num">2–3×</span>
+          <span class="t-label">Longer pump life due to elimination of start/stop cycling</span>
+        </div>
+        <div class="vfd-stat-card">
+          <span class="t-num">Constant</span>
+          <span class="t-label">Pressure maintained regardless of demand fluctuation</span>
+        </div>
+        <div class="vfd-stat-card">
+          <span class="t-num">Built-in</span>
+          <span class="t-label">Motor protection, dry-run shutdown, and fault diagnostics</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Digital Well Logging -->
+  <section class="section">
+    <div class="container">
+      <div class="tech-section-grid">
+        <div class="tech-visual-block">
+          <div class="tech-visual-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Digital Well Logging</h3>
+          <p>Electronic depth and formation logging — know exactly what aquifer you've hit before a drop of water is pumped</p>
+        </div>
+        <div class="tech-content">
+          <span class="section-label">Formation Intelligence</span>
+          <h2>Digital Well Logging During Drilling</h2>
+          <p>Traditional well drilling was partly guesswork — drillers estimated formation depth from surface geology and neighboring well reports. Digital well logging eliminates the guesswork by recording electronic data in real time as the drill bit advances through each formation layer.</p>
+          <p>Our logging tools measure penetration rate, formation density, and drilling resistance at each foot of depth, building a continuous electronic record of your well's geology. When we hit an aquifer zone, we know its depth precisely, its thickness, and its likely yield — before we ever set pump depth.</p>
+          <ul class="tech-bullets">
+            <li>Continuous electronic depth and formation data recorded during drilling</li>
+            <li>Identifies exact aquifer depth and thickness</li>
+            <li>Guides optimal pump setting depth for maximum yield</li>
+            <li>Permanent digital record stored and available to property owner</li>
+            <li>Cross-referenced with Utah GWDB well log database</li>
+            <li>Reduces risk of setting pump in marginal zones</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Real-Time Water Quality Testing -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="tech-section-grid reverse">
+        <div class="tech-visual-block">
+          <div class="tech-visual-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L12 20"/><path d="M5 9.5C5 9.5 3 11 3 14a9 9 0 0 0 18 0c0-3-2-4.5-2-4.5L12 2z"/></svg>
+          </div>
+          <h3>On-Site Water Quality Testing</h3>
+          <p>TDS, pH, turbidity, and arsenic screening completed at the drill site — not weeks later from a lab</p>
+        </div>
+        <div class="tech-content">
+          <span class="section-label">Water Quality</span>
+          <h2>Real-Time Water Quality Testing</h2>
+          <p>Southern Utah has naturally elevated mineral content in many aquifer zones — including arsenic in certain areas of Washington and Kane counties. Knowing your water quality at the drill site allows immediate decisions about casing depth, screen placement, and whether additional treatment will be needed.</p>
+          <p>Our technicians perform field testing during well development, providing same-day results on key parameters. This is not a substitute for a full certified lab analysis, but it gives you actionable information before you leave the job site.</p>
+          <ul class="tech-bullets">
+            <li>Total Dissolved Solids (TDS) — field meter testing during development</li>
+            <li>pH measurement at multiple depths</li>
+            <li>Turbidity / clarity assessment during pump test</li>
+            <li>Arsenic field screening — critical in high-risk Southern Utah zones</li>
+            <li>Hardness and conductivity screening</li>
+            <li>Results documented in your well completion report</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Video Camera Inspection -->
+  <section class="section">
+    <div class="container">
+      <div class="tech-section-grid">
+        <div class="tech-visual-block">
+          <div class="tech-visual-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          </div>
+          <h3>Fiber Optic Camera Inspection</h3>
+          <p>See every inch of your well casing, screen, and interior — without pulling the pump or guessing at the problem</p>
+        </div>
+        <div class="tech-content">
+          <span class="section-label">Well Camera Technology</span>
+          <h2>Video Camera Well Inspection</h2>
+          <p>When an existing well starts underperforming — lower pressure, reduced yield, discolored water — the traditional diagnostic approach was trial and error. Pull the pump, check the pump, put it back, hope for the best. Our fiber optic downhole camera eliminates that guesswork entirely.</p>
+          <p>The camera travels the full depth of your well in real time, transmitting high-resolution video to a surface monitor. We can see casing cracks, screen plugging, mineral encrustation, pump intake condition, and any debris or obstructions — before touching the pump. This leads to faster diagnoses, more accurate repair estimates, and avoids unnecessary pump pulls.</p>
+          <ul class="tech-bullets">
+            <li>High-resolution fiber optic camera to full well depth</li>
+            <li>Live video on surface monitor — you can watch with us</li>
+            <li>Identifies casing damage, joint separation, and corrosion</li>
+            <li>Evaluates screen condition and mineral encrustation</li>
+            <li>Assesses pump intake and static water level visually</li>
+            <li>Recorded video provided to property owner for records</li>
+            <li>Used for pre-purchase well inspections and annual assessments</li>
+          </ul>
+          <div style="margin-top:1.5rem;">
+            <a href="well-inspection.html" class="btn btn-primary">Learn About Inspection Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--navy">
+    <div class="container text-center">
+      <span class="section-label" style="color:var(--orange-light)">Put Our Technology to Work</span>
+      <h2>Get a Free Equipment &amp; Site Assessment</h2>
+      <p style="color:rgba(255,255,255,0.78); max-width:540px; margin:1rem auto 2rem;">We'll visit your site, assess your geology, and recommend the right drilling method and pump system — at no charge.</p>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-primary btn-lg">Request Free Assessment</a>
+        <a href="tel:+14358009355" class="btn btn-secondary btn-lg">Call (435) 800-WELL</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text" style="margin-bottom:1rem;">
+            <span class="logo-main" style="color:white;font-family:Georgia,serif;font-size:1.1rem;display:block;">Utah Water Well Alliance</span>
+            <span class="logo-sub" style="color:#C4922A;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;display:block;">Southern Utah's Well Experts</span>
+          </div>
+          <p>Expert water well drilling, pump installation, repair, and 24/7 emergency service across Southern Utah.</p>
+          <a href="tel:+14358009355" class="footer-phone"><span data-phone>(435) 800-WELL</span></a>
+        </div>
+        <div class="footer-col"><h4>All Services</h4><ul>
+          <li><a href="well-drilling.html">Well Drilling</a></li>
+          <li><a href="pump-services.html">Pump Services</a></li>
+          <li><a href="emergency.html">Emergency</a></li>
+          <li><a href="well-inspection.html">Well Inspection</a></li>
+          <li><a href="well-maintenance.html">Well Maintenance</a></li>
+          <li><a href="utah-well-guide.html">Permit Help</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Resources</h4><ul>
+          <li><a href="utah-well-guide.html">Well Permit Guide</a></li>
+          <li><a href="technology.html">Our Technology</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Service Areas</h4><ul>
+          <li><a href="areas/st-george-ut.html">St. George</a></li>
+          <li><a href="areas/cedar-city-ut.html">Cedar City</a></li>
+          <li><a href="areas/hurricane-ut.html">Hurricane</a></li>
+          <li><a href="service-areas.html">All Areas</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2025 Utah Water Well Alliance LLC. All rights reserved. | <a href="privacy.html" style="color:inherit;">Privacy Policy</a> | <a href="terms.html" style="color:inherit;">Terms</a></div>
+        <div class="footer-license">Utah Licensed Well Driller | Southern Utah</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

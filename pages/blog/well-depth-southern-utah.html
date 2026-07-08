@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Deep Are Water Wells in Southern Utah? A County-by-County Guide | Utah Water Well Alliance</title>
+  <meta name="description" content="Discover typical well depths across Southern Utah by county. Washington, Iron, Beaver, Kane, and Garfield county depth ranges, geology factors, and what affects drilling costs.">
+  <meta name="keywords" content="water well depth southern utah, how deep are wells utah, washington county well depth, iron county well depth, kane county well depth, utah well drilling depth">
+  <link rel="canonical" href="https://utahwaterwellalliance.com/pages/blog/well-depth-southern-utah.html">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .blog-post-header { padding: 5rem 0 4rem; background: linear-gradient(135deg, var(--navy), var(--navy-mid)); color: white; position: relative; overflow: hidden; }
+    .blog-post-header::after { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 60px; background: linear-gradient(to bottom right, transparent 49%, var(--white) 50%); }
+    .blog-post-header h1 { color: white; max-width: 800px; }
+    .blog-post-header p { color: rgba(255,255,255,0.78); max-width: 680px; font-size: 1.1rem; }
+    .post-meta { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .post-meta span { font-size: 0.85rem; color: rgba(255,255,255,0.6); display: flex; align-items: center; gap: 0.4rem; }
+    .post-category { background: var(--orange); color: white; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.75rem; border-radius: 100px; }
+    .article-layout { display: grid; grid-template-columns: 1fr 300px; gap: 3rem; align-items: start; }
+    .article-body h2 { color: var(--navy); border-bottom: 2px solid var(--light-gray); padding-bottom: 0.75rem; margin: 2.5rem 0 1.25rem; font-size: 1.6rem; }
+    .article-body h3 { color: var(--navy-mid); margin: 1.75rem 0 0.75rem; }
+    .article-body p, .article-body li { font-size: 1rem; line-height: 1.8; color: var(--dark-gray); }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .article-body ul { list-style: disc; }
+    .article-body ol { list-style: decimal; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .warning-box { background: #FEF3C7; border-left: 4px solid var(--gold); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.25rem 1.5rem; margin: 1.75rem 0; }
+    .warning-box strong { color: #78350F; }
+    .tip-box { background: #EFF6FF; border-left: 4px solid var(--navy-light); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.25rem 1.5rem; margin: 1.75rem 0; }
+    .tip-box strong { color: var(--navy); }
+    .article-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 1.5rem; }
+    .sidebar-box { background: var(--off-white); border: 1px solid var(--light-gray); border-radius: var(--radius-lg); padding: 1.5rem; }
+    .sidebar-box h4 { margin-bottom: 1rem; font-size: 0.95rem; }
+    .sidebar-cta { background: var(--navy); color: white; border-radius: var(--radius-lg); padding: 1.5rem; text-align: center; }
+    .sidebar-cta h4 { color: white; margin-bottom: 0.5rem; }
+    .sidebar-cta p { color: rgba(255,255,255,0.75); font-size: 0.88rem; margin-bottom: 1.25rem; }
+    .toc-list { display: flex; flex-direction: column; gap: 0.4rem; }
+    .toc-list a { font-size: 0.88rem; color: var(--dark-gray); padding: 0.3rem 0.5rem; border-radius: var(--radius); border-left: 2px solid transparent; transition: var(--transition); }
+    .toc-list a:hover { background: white; border-left-color: var(--orange); color: var(--navy); }
+    .related-posts { display: flex; flex-direction: column; gap: 0.75rem; }
+    .related-post { display: flex; gap: 0.75rem; align-items: flex-start; padding: 0.75rem; background: white; border-radius: var(--radius); border: 1px solid var(--light-gray); transition: var(--transition); }
+    .related-post:hover { border-color: var(--orange); }
+    .related-post-text { font-size: 0.85rem; font-weight: 600; color: var(--navy); line-height: 1.3; }
+    .related-post-cat { font-size: 0.72rem; color: var(--mid-gray); margin-top: 0.25rem; }
+    .county-card { background: var(--off-white); border: 1px solid var(--light-gray); border-radius: var(--radius-lg); padding: 1.5rem; margin: 1.5rem 0; border-left: 4px solid var(--navy); }
+    .county-card h3 { margin: 0 0 0.5rem; color: var(--navy); font-size: 1.15rem; }
+    .county-depth { font-size: 1.5rem; font-weight: 800; color: var(--orange); font-family: Georgia, serif; margin-bottom: 0.75rem; }
+    .data-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.93rem; }
+    .data-table th { background: var(--navy); color: white; padding: 0.75rem 1rem; text-align: left; }
+    .data-table td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--light-gray); color: var(--dark-gray); }
+    .data-table tr:nth-child(even) td { background: var(--off-white); }
+    @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } .article-sidebar { position: static; } }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How Deep Are Water Wells in Southern Utah? A County-by-County Guide",
+    "description": "Typical well depths across Southern Utah by county — Washington, Iron, Beaver, Kane, and Garfield counties — with geology factors and cost implications.",
+    "author": {"@type": "Organization", "name": "Utah Water Well Alliance"},
+    "publisher": {"@type": "Organization", "name": "Utah Water Well Alliance"},
+    "datePublished": "2025-03-10",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://utahwaterwellalliance.com/pages/blog/well-depth-southern-utah.html"}
+  }
+  </script>
+</head>
+<body>
+  <div class="emergency-bar">&#x1F6A8; Well Emergency? We Respond 24/7 &mdash; <a href="tel:+14358009355" data-phone>(435) 800-WELL</a></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../../index.html" class="site-logo">
+        <img src="../../images/logo.png" alt="Utah Water Well Alliance Logo" class="logo-img">
+        <div class="logo-text"><span class="logo-main">Utah Water Well Alliance</span><span class="logo-sub">Southern Utah's Well Experts</span></div>
+      </a>
+      <nav class="main-nav">
+        <a href="../../index.html">Home</a><a href="../services.html">Services</a><a href="../emergency.html">Emergency</a><a href="../utah-well-guide.html">Well Permit Guide</a><a href="../service-areas.html">Service Areas</a><a href="../blog.html" class="active">Blog</a><a href="../contact.html">Contact</a>
+      </nav>
+      <div class="nav-cta"><a href="tel:+14358009355" class="nav-phone" data-phone>(435) 800-WELL</a><a href="../contact.html" class="btn btn-primary">Free Quote</a></div>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="blog-post-header">
+    <div class="container">
+      <div class="breadcrumb" style="margin-bottom:1.5rem;"><a href="../../index.html" style="color:rgba(255,255,255,0.6)">Home</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg><a href="../blog.html" style="color:rgba(255,255,255,0.6)">Blog</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg><span style="color:rgba(255,255,255,0.4)">Well Depth Guide</span></div>
+      <div class="post-meta">
+        <span class="post-category">Well Drilling</span>
+        <span>&#x1F4C5; March 2025</span>
+        <span>&#x23F1; 7 min read</span>
+      </div>
+      <h1>How Deep Are Water Wells in Southern Utah? A County-by-County Guide</h1>
+      <p>Well depth in Southern Utah varies dramatically by county, geology, and exact location &mdash; from 250 feet in Beaver County valleys to over 900 feet in parts of Kane County. This guide breaks it all down so you know what to expect before you drill.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="article-layout">
+        <article class="article-body">
+
+          <p>"How deep will my well need to be?" is one of the first questions we get from Southern Utah landowners planning a new well. It is also one of the most important, because depth is the single biggest driver of drilling cost. A 400-foot well costs roughly twice as much to drill as a 200-foot well, and an 800-foot well costs dramatically more than either.</p>
+
+          <p>The honest answer is that nobody can guarantee a specific depth before drilling begins &mdash; geology is the boss. What experienced well drillers can do is give you probability ranges based on local well logs, aquifer data, and decades of drilling experience in each county. Here is what that data shows for the five main counties of Southern Utah.</p>
+
+          <h2 id="geology-overview">Southern Utah Geology: Why Depth Varies So Much</h2>
+
+          <p>Southern Utah is geologically among the most complex regions in North America. The Colorado Plateau, Basin and Range Province, and various volcanic fields all converge here, creating a patchwork of aquifer types, rock hardness levels, and groundwater depths that can change dramatically within just a few miles.</p>
+
+          <p>The key geological factors that determine well depth in Southern Utah are:</p>
+          <ul>
+            <li><strong>Rock type:</strong> Sandstone (like Navajo Sandstone) can hold water in pore spaces, while fractured granite or basalt requires hitting fracture zones that are less predictable in depth</li>
+            <li><strong>Basin structure:</strong> Valley basins like Cedar Valley and the St. George Basin have thick sediment fill that often contains productive shallow aquifers; canyon and plateau terrain may require drilling much deeper to reach fracture-zone water</li>
+            <li><strong>Elevation and recharge:</strong> Properties at higher elevations near mountain recharge zones sometimes have shallower water than properties on valley floors far from recharge areas</li>
+            <li><strong>Proximity to surface water:</strong> Properties near perennial streams or rivers sometimes benefit from shallow alluvial aquifers; remote desert properties typically require deeper wells</li>
+            <li><strong>Historical aquifer drawdown:</strong> In heavily pumped areas, the static water level has dropped over decades, effectively increasing the required well depth for reliable yield</li>
+          </ul>
+
+          <h2 id="depth-table">County-by-County Depth Summary</h2>
+
+          <table class="data-table">
+            <thead>
+              <tr><th>County</th><th>Typical Depth Range</th><th>Primary Aquifer</th><th>Drilling Difficulty</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Washington County</td><td>400&ndash;800 ft</td><td>Navajo Sandstone / Alluvial</td><td>Moderate&ndash;Hard</td></tr>
+              <tr><td>Iron County</td><td>300&ndash;600 ft</td><td>Cedar Valley Alluvial / Volcanic</td><td>Moderate</td></tr>
+              <tr><td>Beaver County</td><td>250&ndash;700 ft</td><td>Beaver Valley Alluvial</td><td>Moderate</td></tr>
+              <tr><td>Kane County</td><td>500&ndash;900 ft</td><td>Deep Fractured Rock</td><td>Hard&ndash;Very Hard</td></tr>
+              <tr><td>Garfield County</td><td>300&ndash;800 ft</td><td>Variable (Plateau vs. Canyon)</td><td>Moderate&ndash;Hard</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="washington-county">Washington County: 400&ndash;800 Feet</h2>
+
+          <div class="county-card">
+            <h3>Washington County</h3>
+            <div class="county-depth">400&ndash;800 ft typical</div>
+            <p>Most productive residential wells in the St. George area, Hurricane, La Verkin, and surrounding communities reach the Navajo Sandstone aquifer between 400 and 700 feet. Some locations in the St. George basin may find alluvial water at shallower depths (200&ndash;350 feet), while remote properties in the western bench areas and toward the Arizona Strip often require 700&ndash;800+ feet.</p>
+            <p><strong>Important note:</strong> Deeper wells in Washington County carry a higher probability of elevated arsenic due to extended contact time with Navajo Sandstone. Wells deeper than 600 feet should always be tested for arsenic before use. See our <a href="arsenic-southern-utah-well-water.html">arsenic guide</a> for more information.</p>
+          </div>
+
+          <h2 id="iron-county">Iron County: 300&ndash;600 Feet</h2>
+
+          <div class="county-card">
+            <h3>Iron County</h3>
+            <div class="county-depth">300&ndash;600 ft typical</div>
+            <p>The Cedar City area sits in the Cedar Valley, which has a thick alluvial aquifer that is generally more accessible than the deep sandstone formations to the south. Most residential wells in the Cedar City area and Brian Head foothills reach productive water between 300 and 500 feet. The Cedar Valley GMA (Groundwater Management Area) designation reflects the fact that this aquifer is under significant pressure from the region's growth.</p>
+            <p>Properties east of Cedar City toward the plateaus, and areas in the volcanic fields around Minersville, tend to require deeper drilling &mdash; 450&ndash;600 feet is common in these areas. The volcanic geology creates drilling challenges: basalt is very hard on drill bits, and fracture zones in volcanic rock can be difficult to predict.</p>
+          </div>
+
+          <h2 id="beaver-county">Beaver County: 250&ndash;700 Feet</h2>
+
+          <div class="county-card">
+            <h3>Beaver County</h3>
+            <div class="county-depth">250&ndash;700 ft typical</div>
+            <p>Beaver County offers some of the most varied drilling conditions in Southern Utah. The Beaver Valley itself &mdash; running north-south through the county seat &mdash; has a productive alluvial aquifer with relatively accessible water at 250&ndash;450 feet for many locations. This makes Beaver County one of the more affordable drilling destinations in Southern Utah per project.</p>
+            <p>Properties in the western part of the county, toward the Mineral Mountains and Milford Flat area, encounter harder volcanic and metamorphic rocks that can push depths to 500&ndash;700 feet. The geothermal gradient in Beaver County is notably higher than surrounding areas (the county hosts significant geothermal resources), which means some wells encounter warm water &mdash; fine for irrigation and most household uses, but worth noting.</p>
+          </div>
+
+          <h2 id="kane-county">Kane County: 500&ndash;900 Feet</h2>
+
+          <div class="county-card">
+            <h3>Kane County</h3>
+            <div class="county-depth">500&ndash;900 ft typical</div>
+            <p>Kane County is the most challenging and expensive county to drill in Southern Utah. The county encompasses the Grand Staircase-Escalante area, the Vermilion Cliffs, and the Paria Plateau &mdash; some of the most rugged terrain in the American West. Wells here typically must drill through thick sequences of hard sedimentary rock to reach fracture-zone water, and depths of 600&ndash;900 feet are common.</p>
+            <p>The Kanab area, being in a small valley, is somewhat more accessible &mdash; many Kanab-area wells land between 450 and 650 feet. But for rural properties outside the valley, 700&ndash;900 feet is not unusual, and some locations require even deeper drilling. Uranium and fluoride are additional water quality concerns in Kane County wells; comprehensive testing is essential.</p>
+          </div>
+
+          <h2 id="garfield-county">Garfield County: 300&ndash;800 Feet</h2>
+
+          <div class="county-card">
+            <h3>Garfield County</h3>
+            <div class="county-depth">300&ndash;800 ft typical</div>
+            <p>Garfield County covers an enormous geographic area from the Paunsaugunt Plateau (Bryce Canyon area) to the Escalante canyons and Boulder Mountain. Well depth varies significantly depending on exactly where you are drilling. Properties near Panguitch, in the Sevier River valley, may find productive water at 300&ndash;450 feet. Properties in the mesa and canyon areas toward Escalante and Boulder can require 500&ndash;800 feet.</p>
+            <p>The volcanic and crystalline basement rocks common in parts of the county create hard drilling conditions similar to Kane County. Plan for a wide cost range when budgeting a Garfield County well, and ensure your well driller has recent local experience in your specific area of the county.</p>
+          </div>
+
+          <h2 id="depth-factors">What Can Make Your Well Shallower or Deeper</h2>
+
+          <p>Even within these county ranges, your specific location can land significantly above or below the typical range. Factors that tend to push wells <strong>shallower</strong>:</p>
+          <ul>
+            <li>Proximity to perennial streams, rivers, or reservoirs (alluvial recharge)</li>
+            <li>Valley-floor location with thick sediment fill</li>
+            <li>Proximity to mountain recharge zones at higher elevation</li>
+            <li>Historical well log data showing shallow productive zones nearby</li>
+          </ul>
+
+          <p>Factors that tend to push wells <strong>deeper</strong>:</p>
+          <ul>
+            <li>Remote bench or plateau locations away from recharge zones</li>
+            <li>Areas with heavy historic pumping and aquifer drawdown</li>
+            <li>Hard fractured rock geology without porous sedimentary layers</li>
+            <li>High elevation with rapid surface drainage and limited recharge</li>
+            <li>Long distance from any perennial surface water</li>
+          </ul>
+
+          <div class="tip-box">
+            <strong>&#x1F4A1; Before You Drill:</strong> Ask your well driller to pull UDWR well completion reports (public records) for wells within a mile of your location. These reports list actual depths, yields, and static water levels from completed wells and are the best available predictor of what your well will encounter. A reputable driller will always do this research before providing a serious estimate.
+          </div>
+
+          <h2 id="depth-and-cost">How Depth Affects Your Drilling Cost</h2>
+
+          <p>Well drilling in Southern Utah is priced primarily on a per-foot basis, typically <strong>$35&ndash;60 per foot drilled</strong> depending on rock hardness, casing requirements, and mobilization. This means depth has a direct linear effect on drilling costs:</p>
+
+          <ul>
+            <li>A 400-foot well at $45/ft = $18,000 in drilling costs alone</li>
+            <li>A 600-foot well at $45/ft = $27,000 in drilling costs alone</li>
+            <li>An 800-foot well at $50/ft = $40,000 in drilling costs alone</li>
+          </ul>
+
+          <p>Add pump system, electrical, pressure tank, and wellhouse costs to these figures to get total project cost. For detailed cost breakdowns, see our <a href="water-well-drilling-cost-utah.html">2025 Utah Well Drilling Cost Guide</a>.</p>
+
+          <!-- End CTA -->
+          <div style="background:var(--navy);border-radius:var(--radius-lg);padding:2rem;text-align:center;margin-top:3rem;">
+            <h3 style="color:white;margin-bottom:0.75rem;">Need Help With Your Well?</h3>
+            <p style="color:rgba(255,255,255,0.75);margin-bottom:1.5rem;">Utah Water Well Alliance serves Southern Utah with expert well drilling, pump services, and 24/7 emergency response.</p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+              <a href="../contact.html" class="btn btn-primary">Get a Free Estimate</a>
+              <a href="tel:+14358009355" class="btn" style="background:rgba(255,255,255,0.15);color:white;border:1px solid rgba(255,255,255,0.3);">Call (435) 800-WELL</a>
+            </div>
+          </div>
+        </article>
+
+        <aside class="article-sidebar">
+          <div class="sidebar-box">
+            <h4>Table of Contents</h4>
+            <nav class="toc-list">
+              <a href="#geology-overview">Southern Utah Geology Overview</a>
+              <a href="#depth-table">County Depth Summary Table</a>
+              <a href="#washington-county">Washington County (400&ndash;800 ft)</a>
+              <a href="#iron-county">Iron County (300&ndash;600 ft)</a>
+              <a href="#beaver-county">Beaver County (250&ndash;700 ft)</a>
+              <a href="#kane-county">Kane County (500&ndash;900 ft)</a>
+              <a href="#garfield-county">Garfield County (300&ndash;800 ft)</a>
+              <a href="#depth-factors">What Affects Your Depth</a>
+              <a href="#depth-and-cost">Depth &amp; Drilling Cost</a>
+            </nav>
+          </div>
+          <div class="sidebar-cta">
+            <h4>Free Well Consultation</h4>
+            <p>Questions about well depth or drilling costs in your area? Our experts are ready to help.</p>
+            <a href="tel:+14358009355" class="btn btn-primary" style="width:100%;justify-content:center;">Call Now</a>
+            <a href="../contact.html" class="btn" style="width:100%;justify-content:center;background:rgba(255,255,255,0.1);color:white;border:1px solid rgba(255,255,255,0.2);margin-top:0.75rem;">Request Quote</a>
+          </div>
+          <div class="sidebar-box">
+            <h4>Related Articles</h4>
+            <div class="related-posts">
+              <a href="water-well-drilling-cost-utah.html" class="related-post">
+                <div><div class="related-post-text">Water Well Drilling Cost in Utah: 2025 Pricing Guide</div><div class="related-post-cat">Costs &amp; Planning</div></div>
+              </a>
+              <a href="arsenic-southern-utah-well-water.html" class="related-post">
+                <div><div class="related-post-text">Arsenic in Southern Utah Well Water</div><div class="related-post-cat">Water Quality</div></div>
+              </a>
+              <a href="how-to-get-well-permit-utah.html" class="related-post">
+                <div><div class="related-post-text">How to Get a Well Permit in Utah: Step-by-Step Guide</div><div class="related-post-cat">Permits &amp; Regulations</div></div>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text" style="margin-bottom:1rem;"><span class="logo-main" style="color:white;font-family:Georgia,serif;font-size:1.1rem;display:block;">Utah Water Well Alliance</span><span class="logo-sub" style="color:#C4922A;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;display:block;">Southern Utah's Well Experts</span></div>
+          <p>Expert water well services across Southern Utah &mdash; 24/7 emergency response available.</p>
+          <a href="tel:+14358009355" class="footer-phone"><span data-phone>(435) 800-WELL</span></a>
+        </div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="../well-drilling.html">Well Drilling</a></li><li><a href="../pump-services.html">Pump Services</a></li><li><a href="../emergency.html">Emergency</a></li></ul></div>
+        <div class="footer-col"><h4>Resources</h4><ul><li><a href="../utah-well-guide.html">Well Permit Guide</a></li><li><a href="../blog.html">All Blog Posts</a></li></ul></div>
+        <div class="footer-col"><h4>Service Areas</h4><ul><li><a href="../areas/st-george-ut.html">St. George</a></li><li><a href="../areas/cedar-city-ut.html">Cedar City</a></li><li><a href="../service-areas.html">All Areas</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><div>&copy; 2025 Utah Water Well Alliance LLC. All rights reserved.</div><div class="footer-license">Utah Licensed Well Driller | Southern Utah</div></div>
+    </div>
+  </footer>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

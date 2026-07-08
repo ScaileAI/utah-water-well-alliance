@@ -1,0 +1,72 @@
+# Utah Water Well Alliance — Netlify Configuration
+
+[build]
+  publish = "."
+
+# Redirect www to non-www
+[[redirects]]
+  from = "https://www.utahwaterwellalliance.com/*"
+  to   = "https://utahwaterwellalliance.com/:splat"
+  status = 301
+  force  = true
+
+# Clean URLs — allow dropping .html
+[[redirects]]
+  from   = "/pages/utah-well-guide"
+  to     = "/pages/utah-well-guide.html"
+  status = 301
+
+[[redirects]]
+  from   = "/pages/emergency"
+  to     = "/pages/emergency.html"
+  status = 301
+
+[[redirects]]
+  from   = "/pages/blog"
+  to     = "/pages/blog.html"
+  status = 301
+
+[[redirects]]
+  from   = "/pages/services"
+  to     = "/pages/services.html"
+  status = 301
+
+[[redirects]]
+  from   = "/pages/service-areas"
+  to     = "/pages/service-areas.html"
+  status = 301
+
+[[redirects]]
+  from   = "/pages/contact"
+  to     = "/pages/contact.html"
+  status = 301
+
+# 404 fallback
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 404
+
+# Security & Performance Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+    Permissions-Policy     = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

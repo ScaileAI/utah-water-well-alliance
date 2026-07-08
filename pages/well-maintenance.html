@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Well Maintenance Utah | Annual Well Service | Utah Water Well Alliance</title>
+  <meta name="description" content="Annual water well maintenance in Southern Utah — prevent costly emergency drilling with regular service. Pump testing, water quality, pressure system checks, and seasonal startup/winterization.">
+  <meta name="keywords" content="water well maintenance utah, annual well service southern utah, well pump maintenance, well winterization utah, well startup service utah">
+  <link rel="canonical" href="https://utahwaterwellalliance.com/pages/well-maintenance.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .maintenance-package {
+      background: var(--white);
+      border: 2px solid var(--navy);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .maintenance-package-header {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .maintenance-package-header-icon {
+      width: 60px; height: 60px; flex-shrink: 0;
+      background: rgba(212,98,26,0.2);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--orange-light);
+    }
+    .maintenance-package-header h3 { color: white; font-size: 1.5rem; margin-bottom: 0.3rem; }
+    .maintenance-package-header p { color: rgba(255,255,255,0.72); font-size: 0.9rem; margin: 0; }
+    .maintenance-package-body {
+      padding: 2rem 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem 2rem;
+    }
+    @media (max-width: 600px) { .maintenance-package-body { grid-template-columns: 1fr; } }
+    .maintenance-item {
+      display: flex; align-items: flex-start; gap: 0.75rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .maintenance-item:last-child { border-bottom: none; }
+    .maintenance-item-check {
+      width: 22px; height: 22px; flex-shrink: 0;
+      background: var(--orange);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 800;
+    }
+    .maintenance-item h5 { font-size: 0.92rem; color: var(--navy); margin-bottom: 0.15rem; }
+    .maintenance-item p { font-size: 0.82rem; color: var(--dark-gray); margin: 0; line-height: 1.4; }
+    .seasonal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+    @media (max-width: 768px) { .seasonal-grid { grid-template-columns: 1fr; } }
+    .seasonal-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--light-gray);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .seasonal-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+    .seasonal-card-header {
+      padding: 1.25rem 1.5rem;
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: white;
+    }
+    .seasonal-card-header.spring { background: linear-gradient(135deg, #2D6A4F, #40916C); }
+    .seasonal-card-header.fall { background: linear-gradient(135deg, #7F4F24, #B56D29); }
+    .seasonal-card-header.summer { background: linear-gradient(135deg, #7B2D00, var(--orange)); }
+    .seasonal-card-body { padding: 1.25rem 1.5rem; }
+    .seasonal-card-body ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .seasonal-card-body li {
+      display: flex; align-items: flex-start; gap: 0.6rem;
+      font-size: 0.88rem; color: var(--dark-gray);
+    }
+    .seasonal-card-body li::before {
+      content: '→';
+      color: var(--orange);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .warning-box {
+      background: #FEF2F2;
+      border: 2px solid #FCA5A5;
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .warning-box h3 { color: #7F1D1D; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.6rem; }
+    .warning-signs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+    }
+    .warning-sign {
+      display: flex; align-items: flex-start; gap: 0.6rem;
+      font-size: 0.9rem; color: #7F1D1D;
+    }
+    .warning-sign::before {
+      content: '⚠';
+      flex-shrink: 0;
+      font-size: 0.9rem;
+    }
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+    @media (max-width: 768px) { .timeline-grid { grid-template-columns: 1fr; } }
+    .timeline-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      border: 1px solid var(--light-gray);
+      position: relative;
+    }
+    .timeline-badge {
+      display: inline-block;
+      background: var(--navy);
+      color: white;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+    .timeline-card h4 { color: var(--navy); margin-bottom: 0.75rem; }
+    .timeline-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .timeline-card li { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.88rem; color: var(--dark-gray); }
+    .timeline-card li::before { content: '✓'; color: var(--orange); font-weight: 800; flex-shrink: 0; }
+    .areas-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+      justify-content: center;
+    }
+    .area-pill {
+      background: rgba(30,64,128,0.08);
+      border: 1px solid rgba(30,64,128,0.15);
+      color: var(--navy);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+    }
+    .stat-bar {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .stat-bar-item { text-align: center; }
+    .stat-bar-item .num { font-size: 2.2rem; font-weight: 800; color: var(--orange); display: block; line-height: 1; }
+    .stat-bar-item .lbl { font-size: 0.8rem; color: var(--dark-gray); margin-top: 0.25rem; display: block; }
+  </style>
+</head>
+<body>
+
+  <div class="emergency-bar">
+    🚨 Well Emergency? We Respond 24/7 — <a href="tel:+14358009355" data-phone>(435) 800-WELL</a>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo">
+        <img src="../images/logo.png" alt="Utah Water Well Alliance Logo" class="logo-img">
+        <div class="logo-text">
+          <span class="logo-main">Utah Water Well Alliance</span>
+          <span class="logo-sub">Southern Utah's Well Experts</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="../index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="emergency.html">Emergency</a>
+        <a href="utah-well-guide.html">Well Permit Guide</a>
+        <a href="service-areas.html">Service Areas</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="tel:+14358009355" class="nav-phone" data-phone>(435) 800-WELL</a>
+        <a href="contact.html" class="btn btn-primary">Free Quote</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="services.html">Services</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Well Maintenance</span>
+      </div>
+      <h1>Keep Your Well Running With Annual Maintenance</h1>
+      <p>Your water well is a mechanical system with moving parts operating hundreds of feet underground in a challenging mineral environment. Like any mechanical system, regular maintenance keeps it running reliably — and catches the warning signs that precede expensive failures.</p>
+    </div>
+  </section>
+
+  <!-- Why Maintenance Matters -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2rem;">
+        <span class="section-label">The Case for Maintenance</span>
+        <h2 class="section-title">Why Maintenance Matters</h2>
+      </div>
+      <div class="stat-bar">
+        <div class="stat-bar-item">
+          <span class="num">$15,000+</span>
+          <span class="lbl">Average cost of emergency well drilling</span>
+        </div>
+        <div class="stat-bar-item">
+          <span class="num">$800–$2,500</span>
+          <span class="lbl">Typical pump replacement cost with notice</span>
+        </div>
+        <div class="stat-bar-item">
+          <span class="num">3–5×</span>
+          <span class="lbl">Emergency premium over scheduled service</span>
+        </div>
+        <div class="stat-bar-item">
+          <span class="num">10–15 yr</span>
+          <span class="lbl">Typical pump life with proper maintenance</span>
+        </div>
+      </div>
+      <div class="why-grid" style="margin-top:1.5rem;">
+        <div class="why-card">
+          <div class="why-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <h4>Prevent $15,000+ Emergency Drilling</h4>
+          <p>Most emergency well situations have warning signs that show up months or years in advance. A pump drawing high amps, declining flow rate, or subtle water quality shifts are all detectable on an annual service visit — long before they become an emergency.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <h4>Catch Problems While They're Small</h4>
+          <p>Submersible pump bearings wear gradually. Pressure tank bladders develop micro-failures. Well screens slowly plug with mineral deposits. Each of these is a minor repair when caught early — and a major expense when ignored until failure.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L12 20"/><path d="M5 9.5C5 9.5 3 11 3 14a9 9 0 0 0 18 0c0-3-2-4.5-2-4.5L12 2z"/></svg></div>
+          <h4>Maintain Drinking Water Quality</h4>
+          <p>Well caps deteriorate, seals loosen, and surface contaminants can infiltrate a poorly maintained wellhead. Annual inspection keeps your water supply protected from surface contamination and verifies that what comes out of your tap meets safe drinking water standards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Annual Maintenance Package -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2.5rem;">
+        <span class="section-label">What's Included</span>
+        <h2 class="section-title">Annual Maintenance Package</h2>
+        <p style="max-width:560px; margin:0 auto; color:var(--dark-gray);">Our annual maintenance visit covers every component of your well system — from the wellhead cap down to pump performance underground.</p>
+      </div>
+      <div class="maintenance-package">
+        <div class="maintenance-package-header">
+          <div class="maintenance-package-header-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <h3>Annual Well System Service</h3>
+            <p>Comprehensive maintenance covering all major components — completed in a single visit by a licensed technician</p>
+          </div>
+        </div>
+        <div class="maintenance-package-body">
+          <div class="maintenance-item">
+            <div class="maintenance-item-check">✓</div>
+            <div>
+              <h5>Water Quality Test</h5>
+              <p>Field testing for coliform bacteria, TDS, pH, hardness, and arsenic screening</p>
+            </div>
+          </div>
+          <div class="maintenance-item">
+            <div class="maintenance-item-check">✓</div>
+            <div>
+              <h5>Pressure System Check</h5>
+              <p>Static and operating pressure measurement, pressure switch calibration, cut-in/cut-out verification</p>
+            </div>
+          </div>
+          <div class="maintenance-item">
+            <div class="maintenance-item-check">✓</div>
+            <div>
+              <h5>Pump Performance Test</h5>
+              <p>Flow rate measurement (GPM), amp draw comparison to spec, drawdown monitoring</p>
+            </div>
+          </div>
+          <div class="maintenance-item">
+            <div class="maintenance-item-check">✓</div>
+            <div>
+              <h5>Well Cap &amp; Seal Inspection</h5>
+              <p>Verify cap seal integrity, check for insect/rodent intrusion, inspect annular grout at surface</p>
+            </div>
+          </div>
+          <div class="maintenance-item">
+            <div class="maintenance-item-check">✓</div>
+            <div>
+              <h5>Electrical Connection Inspection</h5>
+              <p>Control box wiring check, terminal tightness, ground fault protection verification, motor capacitor test</p>
+            </div>
+          </div>
+          <div class="maintenance-item">
+            <div class="maintenance-item-check">✓</div>
+            <div>
+              <h5>Pressure Tank Assessment</h5>
+              <p>Pre-charge pressure verification, bladder integrity check, tank size adequacy for current demand</p>
+            </div>
+          </div>
+          <div class="maintenance-item">
+            <div class="maintenance-item-check">✓</div>
+            <div>
+              <h5>Pitless Adapter Check</h5>
+              <p>Inspect pitless adapter seal and alignment through casing — indicator of potential future pump pull complexity</p>
+            </div>
+          </div>
+          <div class="maintenance-item">
+            <div class="maintenance-item-check">✓</div>
+            <div>
+              <h5>Written Service Report</h5>
+              <p>Documented findings, current system status, and any recommended actions with cost estimates</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasonal Section -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2.5rem;">
+        <span class="section-label">Year-Round Care</span>
+        <h2 class="section-title">Seasonal Maintenance Considerations</h2>
+        <p style="max-width:580px; margin:0 auto; color:var(--dark-gray);">Southern Utah's elevation range — from St. George's 2,800 feet to the Markagunt Plateau's 9,000+ feet — means seasonal well care varies significantly by location.</p>
+      </div>
+      <div class="seasonal-grid">
+        <div class="seasonal-card">
+          <div class="seasonal-card-header spring">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            Spring Startup Checks
+          </div>
+          <div class="seasonal-card-body">
+            <p style="font-size:0.82rem; color:var(--dark-gray); margin-bottom:0.75rem; line-height:1.5;">After winter — especially at elevation — your well system needs inspection before heavy spring and summer demand begins.</p>
+            <ul>
+              <li>Inspect wellhead for frost heave damage or settling</li>
+              <li>Check heat tape operation and connections if installed</li>
+              <li>Test pressure system after low-use winter period</li>
+              <li>Water quality test after seasonal precipitation recharge</li>
+              <li>Verify irrigation system connections and pressure</li>
+              <li>Inspect electrical connections for winter condensation damage</li>
+            </ul>
+          </div>
+        </div>
+        <div class="seasonal-card">
+          <div class="seasonal-card-header fall">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8C8 10 5.9 16.17 3.82 19a10 10 0 1 0 14.29-14.29"/><path d="M12 6v6l4 2"/></svg>
+            Fall Winterization
+          </div>
+          <div class="seasonal-card-body">
+            <p style="font-size:0.82rem; color:var(--dark-gray); margin-bottom:0.75rem; line-height:1.5;">Critical for properties above 5,000 feet or with above-ground plumbing. Freeze damage to pressure tanks and surface plumbing is expensive and entirely preventable.</p>
+            <ul>
+              <li>Drain and blow out irrigation lines before first freeze</li>
+              <li>Insulate or heat-tape any above-ground well components</li>
+              <li>Check wellhouse or pump house insulation and heating</li>
+              <li>Confirm pressure tank is indoors or properly protected</li>
+              <li>Winterize secondary structures (cabins, outbuildings)</li>
+              <li>Verify emergency shutoff valve access and operation</li>
+            </ul>
+          </div>
+        </div>
+        <div class="seasonal-card">
+          <div class="seasonal-card-header summer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/><circle cx="12" cy="12" r="4"/></svg>
+            Summer High-Demand Prep
+          </div>
+          <div class="seasonal-card-body">
+            <p style="font-size:0.82rem; color:var(--dark-gray); margin-bottom:0.75rem; line-height:1.5;">Southern Utah summers push well systems hard — guests, irrigation, livestock watering, and outdoor use can double or triple typical winter demand.</p>
+            <ul>
+              <li>Flow rate test before peak irrigation season begins</li>
+              <li>Check pump amp draw — heat stress increases motor wear</li>
+              <li>Confirm pressure tank capacity meets peak demand</li>
+              <li>Inspect and test any water treatment systems</li>
+              <li>Test well yield adequacy for full summer demand</li>
+              <li>Consider VFD upgrade before peak season stress</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Warning Signs -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="container--narrow">
+        <div class="warning-box">
+          <h3>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Warning Signs That Need Immediate Attention
+          </h3>
+          <p style="color:#7F1D1D; font-size:0.9rem; margin-bottom:1.25rem;">Don't wait for an annual visit if you notice any of these — contact us immediately or call our 24/7 emergency line.</p>
+          <div class="warning-signs-grid">
+            <div class="warning-sign">Complete loss of water pressure</div>
+            <div class="warning-sign">Sudden pressure drop during use</div>
+            <div class="warning-sign">Pump running but no water flow</div>
+            <div class="warning-sign">Brown, red, or cloudy water</div>
+            <div class="warning-sign">Strong sulfur or rotten egg odor</div>
+            <div class="warning-sign">Air sputtering from faucets</div>
+            <div class="warning-sign">Pump cycling rapidly on/off</div>
+            <div class="warning-sign">Circuit breaker tripping repeatedly</div>
+            <div class="warning-sign">Water with gritty or sandy texture</div>
+            <div class="warning-sign">Pump running constantly without shutoff</div>
+          </div>
+          <div style="margin-top:1.5rem;">
+            <a href="emergency.html" class="btn btn-primary">View Emergency Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maintenance Timeline -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2.5rem;">
+        <span class="section-label">Maintenance Schedule</span>
+        <h2 class="section-title">Well System Maintenance Timeline</h2>
+        <p style="max-width:560px; margin:0 auto; color:var(--dark-gray);">Different components have different service intervals. Here's a practical guide for a typical Southern Utah residential well system.</p>
+      </div>
+      <div class="timeline-grid">
+        <div class="timeline-card">
+          <span class="timeline-badge">Every Year</span>
+          <h4>Annual Service Items</h4>
+          <ul>
+            <li>Water quality bacteria and nitrate test</li>
+            <li>Wellhead cap and seal visual inspection</li>
+            <li>Pressure system calibration check</li>
+            <li>Pump flow rate and amp draw test</li>
+            <li>Electrical connections and control box</li>
+            <li>Pressure tank pre-charge check</li>
+            <li>Arsenic screening (Washington/Kane counties)</li>
+          </ul>
+        </div>
+        <div class="timeline-card">
+          <span class="timeline-badge">Every 3–5 Years</span>
+          <h4>Mid-Cycle Service Items</h4>
+          <ul>
+            <li>Full water quality panel (certified lab)</li>
+            <li>Video camera casing inspection</li>
+            <li>Static water level and drawdown test</li>
+            <li>Pressure tank replacement (if bladder worn)</li>
+            <li>Well screen and casing cleaning if buildup detected</li>
+            <li>Drop pipe and wire condition assessment</li>
+          </ul>
+        </div>
+        <div class="timeline-card">
+          <span class="timeline-badge">Every 10 Years</span>
+          <h4>Long-Term Service Items</h4>
+          <ul>
+            <li>Submersible pump pull and inspection</li>
+            <li>Drop pipe and wire replacement (proactive)</li>
+            <li>Pitless adapter replacement if corroded</li>
+            <li>Full well yield test compared to original</li>
+            <li>Consider VFD upgrade if still on standard tank</li>
+            <li>Evaluate well casing integrity for seismic or settling</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="section section--navy">
+    <div class="container text-center">
+      <span class="section-label" style="color:var(--orange-light)">Where We Work</span>
+      <h2>Maintenance Service Across Southern Utah</h2>
+      <p style="color:rgba(255,255,255,0.78); max-width:560px; margin:1rem auto 0;">We provide annual maintenance service throughout our five-county coverage area — including rural properties, ranches, and remote parcels that other companies won't reach.</p>
+      <div class="areas-strip">
+        <span class="area-pill">Washington County</span>
+        <span class="area-pill">Iron County</span>
+        <span class="area-pill">Beaver County</span>
+        <span class="area-pill">Kane County</span>
+        <span class="area-pill">Garfield County</span>
+        <span class="area-pill">St. George</span>
+        <span class="area-pill">Cedar City</span>
+        <span class="area-pill">Hurricane</span>
+        <span class="area-pill">Kanab</span>
+        <span class="area-pill">Springdale</span>
+        <span class="area-pill">Enterprise</span>
+        <span class="area-pill">Parowan</span>
+      </div>
+      <div style="margin-top:2rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-primary btn-lg">Schedule Annual Service</a>
+        <a href="service-areas.html" class="btn btn-secondary btn-lg">View All Service Areas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container container--narrow text-center">
+      <span class="section-label">Don't Wait for a Problem</span>
+      <h2>Schedule Your Annual Well Service</h2>
+      <p style="color:var(--dark-gray); max-width:520px; margin:1rem auto 2rem; line-height:1.75;">A single annual service visit costs a fraction of one emergency call — and gives you confidence that your water supply is protected. Contact us to schedule or ask about maintenance plans for multi-property owners.</p>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-primary btn-lg">Book Annual Maintenance</a>
+        <a href="tel:+14358009355" class="btn btn-navy btn-lg">Call (435) 800-WELL</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text" style="margin-bottom:1rem;">
+            <span class="logo-main" style="color:white;font-family:Georgia,serif;font-size:1.1rem;display:block;">Utah Water Well Alliance</span>
+            <span class="logo-sub" style="color:#C4922A;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;display:block;">Southern Utah's Well Experts</span>
+          </div>
+          <p>Expert water well drilling, pump installation, repair, and 24/7 emergency service across Southern Utah.</p>
+          <a href="tel:+14358009355" class="footer-phone"><span data-phone>(435) 800-WELL</span></a>
+        </div>
+        <div class="footer-col"><h4>All Services</h4><ul>
+          <li><a href="well-drilling.html">Well Drilling</a></li>
+          <li><a href="pump-services.html">Pump Services</a></li>
+          <li><a href="emergency.html">Emergency</a></li>
+          <li><a href="well-inspection.html">Well Inspection</a></li>
+          <li><a href="well-maintenance.html">Well Maintenance</a></li>
+          <li><a href="utah-well-guide.html">Permit Help</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Resources</h4><ul>
+          <li><a href="utah-well-guide.html">Well Permit Guide</a></li>
+          <li><a href="technology.html">Our Technology</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Service Areas</h4><ul>
+          <li><a href="areas/st-george-ut.html">St. George</a></li>
+          <li><a href="areas/cedar-city-ut.html">Cedar City</a></li>
+          <li><a href="areas/hurricane-ut.html">Hurricane</a></li>
+          <li><a href="service-areas.html">All Areas</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2025 Utah Water Well Alliance LLC. All rights reserved. | <a href="privacy.html" style="color:inherit;">Privacy Policy</a> | <a href="terms.html" style="color:inherit;">Terms</a></div>
+        <div class="footer-license">Utah Licensed Well Driller | Southern Utah</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

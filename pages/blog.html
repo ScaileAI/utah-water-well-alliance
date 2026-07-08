@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Well Blog | Tips, Guides & News for Southern Utah | Utah Water Well Alliance</title>
+  <meta name="description" content="Expert water well articles, drilling tips, pump maintenance guides, and Utah water right news from Utah Water Well Alliance — Southern Utah's well drilling experts.">
+  <meta name="keywords" content="water well blog utah, well drilling tips, well pump maintenance, utah water rights news, southern utah water well guide">
+  <link rel="canonical" href="https://utahwaterwellalliance.com/pages/blog.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+    .blog-card {
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    .blog-card-image {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .blog-card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .blog-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+    .blog-category {
+      background: var(--off-white);
+      color: var(--navy);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 100px;
+      border: 1px solid var(--light-gray);
+    }
+    .blog-date { font-size: 0.8rem; color: var(--mid-gray); }
+    .blog-card h3 { font-size: 1.15rem; margin-bottom: 0.6rem; transition: var(--transition); }
+    .blog-card:hover h3 { color: var(--orange); }
+    .blog-card p { font-size: 0.9rem; color: var(--dark-gray); margin-bottom: 1.25rem; flex: 1; }
+    .blog-read-more {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--orange);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      margin-top: auto;
+      transition: var(--transition);
+    }
+    .blog-read-more:hover { gap: 0.6rem; }
+    .blog-featured {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 3rem;
+      color: var(--white);
+    }
+    .blog-featured h2 { color: var(--white); margin-bottom: 0.75rem; }
+    .blog-featured p { color: rgba(255,255,255,0.78); margin-bottom: 1.5rem; }
+    .blog-featured-label {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+      margin-bottom: 1rem;
+    }
+    .blog-featured-visual {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      text-align: center;
+      font-size: 5rem;
+    }
+    .category-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .cat-btn {
+      padding: 0.45rem 1rem;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1.5px solid var(--light-gray);
+      color: var(--dark-gray);
+      cursor: pointer;
+      transition: var(--transition);
+      background: var(--white);
+    }
+    .cat-btn:hover, .cat-btn.active {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+    @media (max-width: 768px) {
+      .blog-featured { grid-template-columns: 1fr; }
+      .blog-featured-visual { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="emergency-bar">
+    🚨 Well Emergency? We Respond 24/7 — <a href="tel:+14358009355" data-phone>(435) 800-WELL</a>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo">
+        <img src="../images/logo.png" alt="Utah Water Well Alliance Logo" class="logo-img">
+        <div class="logo-text">
+          <span class="logo-main">Utah Water Well Alliance</span>
+          <span class="logo-sub">Southern Utah's Well Experts</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="../index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="technology.html">Technology</a>
+        <a href="emergency.html">Emergency</a>
+        <a href="utah-well-guide.html">Well Permit Guide</a>
+        <a href="service-areas.html">Service Areas</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="tel:+14358009355" class="nav-phone" data-phone>(435) 800-WELL</a>
+        <a href="contact.html" class="btn btn-primary">Free Quote</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Blog</span>
+      </div>
+      <h1>Well Drilling Tips, Guides & Utah Water News</h1>
+      <p>Expert articles from Southern Utah's water well professionals — covering everything from pump maintenance and water quality to Utah permitting updates and drilling technology.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Featured Post -->
+      <div class="blog-featured">
+        <div>
+          <span class="blog-featured-label">Featured Article</span>
+          <h2>How to Get a Water Well Permit in Utah: The Complete 2025 Guide</h2>
+          <p>Everything Southern Utah property owners need to know about water rights, well permits, Start Cards, and the Utah Division of Water Rights process — explained step by step.</p>
+          <a href="blog/how-to-get-well-permit-utah.html" class="btn btn-primary">Read the Full Guide</a>
+        </div>
+        <div class="blog-featured-visual">💧</div>
+      </div>
+
+      <!-- Category Filters -->
+      <div class="category-filters">
+        <button class="cat-btn active">All Articles</button>
+        <button class="cat-btn">Well Drilling</button>
+        <button class="cat-btn">Pump Repair</button>
+        <button class="cat-btn">Water Quality</button>
+        <button class="cat-btn">Utah Permits</button>
+        <button class="cat-btn">Maintenance</button>
+        <button class="cat-btn">Southern Utah</button>
+      </div>
+
+      <!-- Blog Grid -->
+      <div class="blog-grid">
+
+        <article class="blog-card">
+          <div class="blog-card-image" style="background:linear-gradient(135deg,#0C1F3F,#1E4080);">
+            <span>🔩</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="blog-category">Pump Repair</span>
+              <span class="blog-date">March 2025</span>
+            </div>
+            <h3>7 Warning Signs Your Well Pump Is About to Fail</h3>
+            <p>Don't get caught without water. Learn the early warning signs of a failing submersible pump so you can replace it on your schedule — not in an emergency.</p>
+            <a href="blog/well-pump-failure-warning-signs.html" class="blog-read-more">
+              Read Article
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-image" style="background:linear-gradient(135deg,#7F1D1D,#991B1B);">
+            <span>⚠️</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="blog-category">Water Quality</span>
+              <span class="blog-date">February 2025</span>
+            </div>
+            <h3>Arsenic in Southern Utah Well Water: What You Need to Know</h3>
+            <p>Elevated arsenic levels are a real concern in Washington and Iron County well water. Here's what the science says, how to test, and what treatment options work.</p>
+            <a href="blog/arsenic-southern-utah-well-water.html" class="blog-read-more">
+              Read Article
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-image" style="background:linear-gradient(135deg,#14532D,#166534);">
+            <span>📋</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="blog-category">Utah Permits</span>
+              <span class="blog-date">January 2025</span>
+            </div>
+            <h3>Utah Domestic Well Exemption: Who Qualifies and How to Apply</h3>
+            <p>The domestic well exemption simplifies the water right process for many homeowners. Find out if your project qualifies and what steps to follow in 2025.</p>
+            <a href="blog/utah-domestic-well-exemption.html" class="blog-read-more">
+              Read Article
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-image" style="background:linear-gradient(135deg,#1C1917,#292524);">
+            <span>⚡</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="blog-category">Well Drilling</span>
+              <span class="blog-date">December 2024</span>
+            </div>
+            <h3>How Deep Does a Well Need to Be in Southern Utah?</h3>
+            <p>Well depth varies dramatically across Washington, Iron, and Kane counties. We break down typical depths by area, aquifer type, and intended use — with real local data.</p>
+            <a href="blog/well-depth-southern-utah.html" class="blog-read-more">
+              Read Article
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-image" style="background:linear-gradient(135deg,#1E3A5F,#1E4080);">
+            <span>🔋</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="blog-category">Pump Repair</span>
+              <span class="blog-date">November 2024</span>
+            </div>
+            <h3>Variable Frequency Drive Pumps: Are They Worth It for Utah Homeowners?</h3>
+            <p>VFD pump systems cost more upfront but save significant money over time. We run the real numbers for a Southern Utah household and break down the ROI.</p>
+            <a href="blog/vfd-pump-systems-utah.html" class="blog-read-more">
+              Read Article
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-image" style="background:linear-gradient(135deg,#78350F,#92400E);">
+            <span>🏡</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="blog-category">Maintenance</span>
+              <span class="blog-date">October 2024</span>
+            </div>
+            <h3>Annual Well Maintenance Checklist for Southern Utah Homeowners</h3>
+            <p>An annual checkup can double the life of your well system. Here's the exact maintenance checklist we recommend for every private well owner in Southern Utah.</p>
+            <a href="blog/annual-well-maintenance-checklist.html" class="blog-read-more">
+              Read Article
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-image" style="background:linear-gradient(135deg,#134E4A,#115E59);">
+            <span>🗺️</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="blog-category">Southern Utah</span>
+              <span class="blog-date">September 2024</span>
+            </div>
+            <h3>Washington County Water: Why St. George's Growth Is Putting Aquifers Under Pressure</h3>
+            <p>St. George is one of America's fastest-growing cities — and its water supply is feeling it. What does this mean for private well owners in Washington County?</p>
+            <a href="blog/washington-county-water-aquifer-pressure.html" class="blog-read-more">
+              Read Article
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-image" style="background:linear-gradient(135deg,#3B0764,#4C1D95);">
+            <span>🔬</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="blog-category">Water Quality</span>
+              <span class="blog-date">August 2024</span>
+            </div>
+            <h3>What Should You Test Your Well Water For? A Complete Utah Guide</h3>
+            <p>The EPA recommends annual well water testing but doesn't tell you what to test for. We break down the specific contaminants to test in Southern Utah — and why they matter.</p>
+            <a href="blog/well-water-testing-utah.html" class="blog-read-more">
+              Read Article
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-image" style="background:linear-gradient(135deg,#0C4A6E,#075985);">
+            <span>💰</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="blog-category">Well Drilling</span>
+              <span class="blog-date">July 2024</span>
+            </div>
+            <h3>How Much Does It Cost to Drill a Water Well in Utah? (2025 Prices)</h3>
+            <p>Honest, up-to-date cost breakdowns for residential well drilling in Southern Utah — including depth, formation type, casing, pump, and permit costs.</p>
+            <a href="blog/water-well-drilling-cost-utah.html" class="blog-read-more">
+              Read Article
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Quote CTA -->
+      <div style="background:var(--navy); border-radius:var(--radius-lg); padding:2.5rem; text-align:center; margin-top:4rem;">
+        <h3 style="color:white; margin-bottom:0.5rem;">Ready to Get Your Well Started?</h3>
+        <p style="color:rgba(255,255,255,0.75); margin-bottom:1.5rem; max-width:480px; margin-left:auto; margin-right:auto;">Get a free quote from Southern Utah's well experts — we respond within 1 business hour.</p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a href="../index.html#contact" class="btn btn-primary">Get a Free Quote</a>
+          <a href="tel:+14358009355" class="btn btn-secondary" data-phone>(435) 800-WELL</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="site-logo">
+            <div class="logo-text">
+              <span class="logo-main">Utah Water Well Alliance</span>
+              <span class="logo-sub">Southern Utah's Well Experts</span>
+            </div>
+          </a>
+          <p>Expert water well drilling, pump installation, repair, and 24/7 emergency service across Southern Utah.</p>
+          <a href="tel:+14358009355" class="footer-phone"><span data-phone>(435) 800-WELL</span></a>
+        </div>
+        <div class="footer-col"><h4>Services</h4><ul>
+          <li><a href="well-drilling.html">Well Drilling</a></li>
+          <li><a href="pump-services.html">Pump Services</a></li>
+          <li><a href="emergency.html">Emergency</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Popular Posts</h4><ul>
+          <li><a href="blog/how-to-get-well-permit-utah.html">Utah Well Permit Guide</a></li>
+          <li><a href="blog/well-pump-failure-warning-signs.html">Pump Failure Signs</a></li>
+          <li><a href="blog/water-well-drilling-cost-utah.html">Drilling Costs 2025</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Service Areas</h4><ul>
+          <li><a href="areas/st-george-ut.html">St. George</a></li>
+          <li><a href="areas/cedar-city-ut.html">Cedar City</a></li>
+          <li><a href="areas/hurricane-ut.html">Hurricane</a></li>
+          <li><a href="service-areas.html">All Areas</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2025 Utah Water Well Alliance LLC. All rights reserved.</div>
+        <div class="footer-license">Utah Licensed Well Driller | Southern Utah</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

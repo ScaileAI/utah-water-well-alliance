@@ -1,0 +1,10 @@
+{
+  "name": "utah-water-well-alliance",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "serve -l 3000 ."
+  },
+  "devDependencies": {
+    "jimp": "^1.6.0"
+  }
+}
