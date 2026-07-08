@@ -115,8 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── Phone Number Tracking Placeholder ── */
   /* Replace with CallRail swap tag when ready */
-  const PHONE_DISPLAY = '(435) 800-WELL';
-  const PHONE_HREF    = 'tel:+14358009355';
+  const PHONE_DISPLAY = '(435) 500-2479';
+  const PHONE_HREF    = 'tel:+14355002479';
   document.querySelectorAll('[data-phone]').forEach(el => {
     el.textContent = PHONE_DISPLAY;
     if (el.tagName === 'A') el.href = PHONE_HREF;
