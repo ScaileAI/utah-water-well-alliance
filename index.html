@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Utah Water Well Alliance | Connect with Certified Water Well Drillers Across Utah</title>
-  <meta name="description" content="Utah Water Well Alliance connects landowners with certified, trusted water well drilling professionals across all of Utah. Well permits, drilling, pump installation, and water rights guidance — statewide.">
-  <meta name="keywords" content="water well drilling utah, well permit utah, water well company utah, well pump repair utah, emergency well service utah, utah water well alliance, certified well driller utah, find water well driller utah">
+  <title>Utah Water Well Alliance | Licensed Water Well Professionals Across Utah</title>
+  <meta name="description" content="Utah Water Well Alliance connects Utah landowners with licensed water well professionals. Water rights, permits, drilling, pump installation, and 24/7 emergency service statewide.">
+  <meta name="keywords" content="water well drilling utah, well permit utah, water well company utah, well pump repair utah, emergency well service utah, utah water well alliance, certified well driller utah">
   <meta property="og:title" content="Utah Water Well Alliance | We Help Utah Get Water">
   <meta property="og:description" content="Connecting Utah landowners with certified water well drilling professionals statewide. Permits, drilling, pump installation, and 24/7 emergency service.">
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://utahwaterwellalliance.com/">
-  <!-- Netlify Identity (optional for CMS) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="css/style.css">
   <script type="application/ld+json">
@@ -26,6 +25,532 @@
     "openingHours": "Mo-Su 00:00-24:00"
   }
   </script>
+  <style>
+    /* ============================================================
+       HOMEPAGE REDESIGN — only affects index.html
+    ============================================================ */
+
+    /* --- Header overrides --- */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid #dde4ee;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+    }
+    .main-nav a { color: var(--navy); font-size: 0.875rem; }
+    .main-nav a:hover, .main-nav a.active { color: var(--orange); }
+    .nav-phone { color: var(--navy) !important; }
+
+    /* Resources dropdown */
+    .nav-drop { position: relative; }
+    .nav-drop > a { display: inline-flex; align-items: center; gap: 3px; cursor: pointer; }
+    .drop-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 170px;
+      background: #fff;
+      border: 1px solid #dde4ee;
+      border-radius: 8px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+      z-index: 300;
+      padding: 6px 0;
+    }
+    .drop-menu a {
+      display: block;
+      padding: 9px 18px;
+      font-size: 0.875rem;
+      color: var(--navy);
+      white-space: nowrap;
+      text-decoration: none;
+    }
+    .drop-menu a:hover { background: #f4f7fb; color: var(--orange); }
+    .nav-drop:hover .drop-menu,
+    .nav-drop:focus-within .drop-menu { display: block; }
+
+    /* --- Hero --- */
+    .hero-new {
+      background: linear-gradient(140deg, #0b1e3d 0%, #1e4080 55%, #152e6b 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 56px 0 0;
+    }
+    .hero-new::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0' y='0' width='2' height='2' fill='rgba(255,255,255,0.04)'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    /* mountain silhouette */
+    .hero-mountains {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-new-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 2.5rem;
+      align-items: start;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Left content */
+    .hero-new-content {
+      padding-top: 1rem;
+      padding-bottom: 3rem;
+    }
+    .hero-new-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 20px;
+      padding: 5px 14px;
+      color: rgba(255,255,255,0.85);
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      margin-bottom: 1.25rem;
+    }
+    .hero-new-content h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      color: #fff;
+      line-height: 1.15;
+      font-family: Georgia, serif;
+      margin-bottom: 1.1rem;
+    }
+    .hero-new-content h1 em {
+      font-style: normal;
+      color: var(--orange);
+    }
+    .hero-new-content .hero-sub {
+      color: rgba(255,255,255,0.75);
+      font-size: 1rem;
+      line-height: 1.75;
+      max-width: 480px;
+      margin-bottom: 2rem;
+    }
+    .hero-new-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.25rem;
+    }
+    .btn-ghost-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.8rem 1.4rem;
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: var(--radius, 6px);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-ghost-white:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+    .hero-trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.82rem;
+    }
+    .hero-trust-item svg { color: var(--orange); flex-shrink: 0; }
+
+    /* Right: form card */
+    #get-quote {
+      background: #fff;
+      border-radius: 12px 12px 0 0;
+      padding: 1.75rem 1.75rem 0;
+      position: relative;
+      z-index: 2;
+    }
+    #get-quote h3 {
+      color: var(--navy);
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
+    }
+    #get-quote .form-sub {
+      color: #6b7a99;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+    .form-privacy {
+      font-size: 0.75rem;
+      color: #9aa5be;
+      text-align: center;
+      padding-bottom: 1.25rem;
+    }
+
+    /* Wave bottom of hero */
+    .hero-wave {
+      position: absolute;
+      bottom: -1px; left: 0;
+      width: 100%; line-height: 0; z-index: 1;
+    }
+
+    /* --- Trust strip --- */
+    .trust-strip {
+      background: #f4f7fb;
+      border-bottom: 1px solid #dde4ee;
+      padding: 0.9rem 0;
+    }
+    .trust-strip-inner {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .trust-chip {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.85rem;
+      color: var(--navy);
+      font-weight: 500;
+    }
+    .trust-chip svg { color: var(--orange); }
+
+    /* --- How It Works --- */
+    .hiw {
+      padding: 5rem 0;
+      background: #fff;
+    }
+    .hiw-label {
+      text-align: center;
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--orange);
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .hiw-title {
+      text-align: center;
+      font-size: clamp(1.7rem, 3vw, 2.2rem);
+      color: var(--navy);
+      font-family: Georgia, serif;
+      margin-bottom: 0;
+    }
+    .section-rule {
+      width: 44px; height: 3px;
+      background: var(--orange);
+      border-radius: 2px;
+      margin: 0.75rem auto 3rem;
+    }
+    .hiw-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .hiw-step {
+      text-align: center;
+      position: relative;
+    }
+    .hiw-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 28px;
+      right: -0.75rem;
+      width: 1.5rem;
+      height: 2px;
+      background: #d1dae8;
+    }
+    .hiw-num {
+      width: 56px; height: 56px;
+      background: var(--navy);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 0 auto 0.75rem;
+    }
+    .hiw-icon {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      border: 2px solid var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0.75rem;
+      color: var(--orange);
+    }
+    .hiw-step h4 { color: var(--navy); font-size: 0.95rem; margin-bottom: 0.4rem; }
+    .hiw-step p { color: #6b7a99; font-size: 0.83rem; line-height: 1.65; }
+
+    /* --- Why Choose Us (dark) --- */
+    .why-dark {
+      background: var(--navy);
+      padding: 5rem 0;
+    }
+    .why-dark-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 2.75rem;
+    }
+    .why-dark-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 1.6rem;
+      transition: background 0.2s;
+    }
+    .why-dark-card:hover { background: rgba(255,255,255,0.11); }
+    .why-dark-card svg { color: var(--orange); margin-bottom: 0.9rem; display: block; }
+    .why-dark-card h4 { color: #fff; font-size: 0.92rem; margin-bottom: 0.4rem; }
+    .why-dark-card p { color: rgba(255,255,255,0.6); font-size: 0.83rem; line-height: 1.65; margin: 0; }
+
+    /* --- Cost Section --- */
+    .cost-sec {
+      padding: 5rem 0;
+      background: #f4f7fb;
+    }
+    .cost-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .cost-eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .cost-title {
+      font-size: 1.7rem;
+      font-family: Georgia, serif;
+      color: var(--navy);
+      margin-bottom: 0.15rem;
+    }
+    .cost-range {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--orange);
+      line-height: 1.1;
+      margin-bottom: 1.4rem;
+    }
+    .cost-factors-label {
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 0.6rem;
+    }
+    .cost-factor-list {
+      list-style: none;
+      padding: 0; margin: 0 0 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem 1.5rem;
+    }
+    .cost-factor-list li {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.875rem;
+      color: #4a5568;
+    }
+    .cost-factor-list li::before {
+      content: '';
+      width: 16px; height: 16px;
+      border-radius: 50%;
+      background: var(--orange);
+      flex-shrink: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .cost-visual {
+      background: linear-gradient(145deg, #1e4080 0%, #0b1e3d 100%);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cost-visual-note {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .cost-stat {
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: 8px;
+      padding: 0.9rem 1rem;
+      margin-bottom: 0.75rem;
+      position: relative;
+      z-index: 1;
+    }
+    .cost-stat .big { font-size: 1.5rem; font-weight: 700; color: #fff; }
+    .cost-stat .small { font-size: 0.75rem; color: rgba(255,255,255,0.55); }
+    .cost-visual-mtn {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      opacity: 0.12;
+    }
+
+    /* --- Resource Cards --- */
+    .resources {
+      padding: 5rem 0;
+      background: #fff;
+    }
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.1rem;
+      margin-top: 2.5rem;
+    }
+    .resource-card {
+      border: 1px solid #dde4ee;
+      border-radius: 10px;
+      padding: 1.4rem;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+    .resource-card:hover {
+      border-color: var(--orange);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
+    .resource-card svg { color: var(--navy); opacity: 0.65; margin-bottom: 0.7rem; }
+    .resource-card h4 { color: var(--navy); font-size: 0.9rem; margin-bottom: 0.35rem; }
+    .resource-card p { color: #6b7a99; font-size: 0.78rem; line-height: 1.55; flex: 1; margin-bottom: 0.75rem; }
+    .resource-more { color: var(--orange); font-size: 0.78rem; font-weight: 700; }
+
+    /* --- CTA Banner --- */
+    .cta-banner {
+      background: var(--navy);
+      padding: 4rem 0;
+    }
+    .cta-banner-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: center;
+    }
+    .cta-banner h2 { color: #fff; font-size: 1.7rem; font-family: Georgia, serif; margin-bottom: 0.4rem; }
+    .cta-banner p { color: rgba(255,255,255,0.7); font-size: 0.9rem; }
+    .cta-banner-btns { display: flex; flex-direction: column; gap: 0.75rem; min-width: 220px; }
+
+    /* --- Footer V2 --- */
+    .footer-v2 { background: #0b1e3d; padding: 3.5rem 0 0; }
+    .footer-v2-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr 1.2fr;
+      gap: 2rem;
+      padding-bottom: 3rem;
+    }
+    .fv2-brand p {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.83rem;
+      line-height: 1.75;
+      margin: 1rem 0;
+    }
+    .fv2-social { display: flex; gap: 0.6rem; }
+    .fv2-social a {
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.18);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .fv2-social a:hover { border-color: var(--orange); color: var(--orange); }
+    .footer-v2 h4 {
+      color: #fff;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+    .footer-v2 ul { list-style: none; padding: 0; margin: 0; }
+    .footer-v2 ul li { margin-bottom: 0.5rem; }
+    .footer-v2 ul a {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-v2 ul a:hover { color: var(--orange); }
+    .fv2-phone h4 { margin-bottom: 0.4rem; }
+    .fv2-phone .ph-label { color: rgba(255,255,255,0.4); font-size: 0.75rem; margin-bottom: 0.15rem; }
+    .fv2-phone .ph-num {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 0.2rem;
+    }
+    .fv2-phone .ph-avail { color: rgba(255,255,255,0.4); font-size: 0.75rem; margin-bottom: 1.1rem; }
+    .footer-v2-bottom {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 1.25rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+    }
+    .footer-v2-bottom a { color: rgba(255,255,255,0.4); text-decoration: none; }
+    .footer-v2-bottom a:hover { color: #fff; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 960px) {
+      .hero-new-inner { grid-template-columns: 1fr; }
+      #get-quote { border-radius: 12px; margin-top: 2rem; padding-bottom: 1.25rem; }
+      .hero-new-content { padding-bottom: 1.5rem; }
+      .hiw-grid { grid-template-columns: repeat(2, 1fr); }
+      .hiw-step:not(:last-child)::after { display: none; }
+      .why-dark-grid { grid-template-columns: repeat(2, 1fr); }
+      .cost-grid { grid-template-columns: 1fr; }
+      .resource-grid { grid-template-columns: repeat(2, 1fr); }
+      .cta-banner-inner { grid-template-columns: 1fr; }
+      .cta-banner-btns { flex-direction: row; flex-wrap: wrap; }
+      .footer-v2-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .hero-new { padding: 48px 0 0; }
+      .hiw-grid { grid-template-columns: 1fr; }
+      .why-dark-grid { grid-template-columns: 1fr; }
+      .resource-grid { grid-template-columns: 1fr 1fr; }
+      .trust-strip-inner { flex-direction: column; gap: 0.75rem; padding: 0 1.5rem; }
+      .footer-v2-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 400px) {
+      .resource-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -47,18 +572,28 @@
 
       <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html" class="active">Home</a>
-        <a href="pages/services.html">Services</a>
-        <a href="pages/technology.html">Technology</a>
-        <a href="pages/emergency.html">Emergency</a>
-        <a href="pages/utah-well-guide.html">Well Permit Guide</a>
+        <a href="pages/contact.html">Get Started</a>
+        <a href="pages/well-drilling.html">Well Cost</a>
+        <a href="pages/utah-well-guide.html">Water Rights</a>
         <a href="pages/service-areas.html">Service Areas</a>
-        <a href="pages/blog.html">Blog</a>
+        <div class="nav-drop">
+          <a href="pages/blog.html" aria-haspopup="true">
+            Resources
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="drop-menu">
+            <a href="pages/blog.html">Blog</a>
+            <a href="pages/faq.html">FAQs</a>
+            <a href="pages/technology.html">Technology</a>
+            <a href="pages/emergency.html">Emergency</a>
+          </div>
+        </div>
         <a href="pages/contact.html">Contact</a>
       </nav>
 
       <div class="nav-cta">
         <a href="tel:+14355002479" class="nav-phone" data-phone>(435) 500-2479</a>
-        <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+        <a href="#get-quote" class="btn btn-primary">Get My Free Well Plan</a>
       </div>
 
       <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
@@ -68,659 +603,440 @@
   </header>
 
   <!-- Hero -->
-  <section class="hero" id="contact">
-    <div class="container">
-      <div class="hero-grid">
+  <section class="hero-new">
+    <!-- subtle mountain background -->
+    <div class="hero-mountains" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 380" preserveAspectRatio="none"
+           style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0.06;">
+        <path d="M0,380 L0,200 L200,90 L400,160 L580,40 L760,130 L960,30 L1140,110 L1300,55 L1440,100 L1440,380 Z" fill="white"/>
+        <path d="M0,380 L0,280 L300,170 L500,220 L700,100 L920,190 L1120,120 L1320,200 L1440,150 L1440,380 Z" fill="white" opacity="0.5"/>
+      </svg>
+    </div>
 
-        <!-- Left: CTA Content -->
-        <div class="hero-content">
-          <div class="hero-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            Utah's Most Trusted Water Well Network
+    <div class="hero-new-inner">
+
+      <!-- Left: copy -->
+      <div class="hero-new-content">
+        <div class="hero-new-eyebrow">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Utah's Trusted Water Well Network
+        </div>
+        <h1>Bought Land?<br><em>We'll Help You<br>Get Water.</em></h1>
+        <p class="hero-sub">We connect Utah landowners with licensed water well professionals and guide you through permits, water rights, drilling, pumps, and everything in between.</p>
+        <div class="hero-new-btns">
+          <a href="#get-quote" class="btn btn-primary btn-lg">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Get My Free Well Plan
+          </a>
+          <a href="pages/service-areas.html" class="btn-ghost-white">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Can I Drill a Well Here?
+          </a>
+        </div>
+        <div class="hero-trust-row">
+          <div class="hero-trust-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Licensed Professionals
           </div>
-          <h1>Own Land in Utah?<br><span>We Help You Get a Water Well.</span></h1>
-          <p class="hero-tagline">Fast. Legal. Done Right.</p>
-          <p class="hero-sub">Utah Water Well Alliance connects landowners with certified, trusted water well professionals statewide — water rights, permits, drilling, and pump installation across all of Utah.</p>
-          <div class="hero-buttons">
-            <a href="tel:+14355002479" class="btn btn-primary btn-lg" data-phone>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.45 2 2 0 0 1 3.57 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              (435) 500-2479
-            </a>
-            <a href="pages/emergency.html" class="btn btn-emergency btn-lg">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-              24/7 Emergency
-            </a>
+          <div class="hero-trust-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            All of Utah
           </div>
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <span class="stat-num">500+</span>
-              <span class="stat-label">Homeowners Helped</span>
-            </div>
-            <div class="hero-stat">
-              <span class="stat-num">24/7</span>
-              <span class="stat-label">Emergency Response</span>
-            </div>
-            <div class="hero-stat">
-              <span class="stat-num">29</span>
-              <span class="stat-label">Utah Counties</span>
-            </div>
-            <div class="hero-stat">
-              <span class="stat-num">100%</span>
-              <span class="stat-label">Certified Network</span>
-            </div>
+          <div class="hero-trust-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            No Obligation
+          </div>
+          <div class="hero-trust-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            24/7 Emergency
           </div>
         </div>
-
-        <!-- Right: Lead Form -->
-        <div class="hero-form-card">
-          <h3 class="hero-form-title">Get a Free Quote</h3>
-          <p class="hero-form-sub">We respond within 1 business hour.</p>
-          <iframe
-            src="https://api.leadconnectorhq.com/widget/form/xrDUYAQdSBXAIGdX7h38"
-            style="width:100%;border:none;border-radius:4px;display:block;"
-            id="inline-hero-xrDUYAQdSBXAIGdX7h38"
-            data-layout="{'id':'INLINE'}"
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="UtahWaterWellAlliance"
-            data-height="852"
-            data-layout-iframe-id="inline-hero-xrDUYAQdSBXAIGdX7h38"
-            data-form-id="xrDUYAQdSBXAIGdX7h38"
-            title="UtahWaterWellAlliance"
-            height="852">
-          </iframe>
-          <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-          <p style="font-size:0.78rem;color:rgba(255,255,255,0.45);margin-top:0.5rem;text-align:center;">🔒 Private &amp; never shared</p>
-        </div>
-
       </div>
+
+      <!-- Right: lead form -->
+      <div id="get-quote">
+        <h3>Get Your Free Well Plan</h3>
+        <p class="form-sub">We respond within 1 business hour.</p>
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/xrDUYAQdSBXAIGdX7h38"
+          style="width:100%;border:none;border-radius:4px;display:block;"
+          id="inline-hero-xrDUYAQdSBXAIGdX7h38"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="UtahWaterWellAlliance"
+          data-height="852"
+          data-layout-iframe-id="inline-hero-xrDUYAQdSBXAIGdX7h38"
+          data-form-id="xrDUYAQdSBXAIGdX7h38"
+          title="UtahWaterWellAlliance"
+          height="852">
+        </iframe>
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+        <p class="form-privacy">🔒 Private &amp; never shared</p>
+      </div>
+
+    </div><!-- /hero-new-inner -->
+
+    <!-- Wave to white -->
+    <div class="hero-wave" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 70" preserveAspectRatio="none" style="width:100%;display:block;">
+        <path d="M0,35 C240,70 480,5 720,42 C960,78 1200,12 1440,48 L1440,70 L0,70 Z" fill="white"/>
+      </svg>
     </div>
   </section>
 
-  <!-- Trust Bar -->
-  <div class="trust-bar">
+  <!-- Trust Strip -->
+  <div class="trust-strip">
     <div class="container">
-      <div class="trust-bar-inner">
-        <div class="trust-item">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Network of Licensed Utah Drillers
+      <div class="trust-strip-inner">
+        <div class="trust-chip">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Licensed Professionals Only
         </div>
-        <div class="trust-item">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          Same-Day Emergency Response
+        <div class="trust-chip">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Statewide Coverage — All of Utah
         </div>
-        <div class="trust-item">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Free Written Estimates
-        </div>
-        <div class="trust-item">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          Family-Owned & Operated
-        </div>
-        <div class="trust-item">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          Latest Drilling Technology
+        <div class="trust-chip">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          No Obligation — Free Guidance
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Services -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center">
-        <span class="section-label">What We Do</span>
-        <h2 class="section-title">Complete Water Well Solutions</h2>
-        <p class="section-sub">From the first permit application to ongoing maintenance, Utah Water Well Alliance connects you with the right certified professional for every stage of your water well project.</p>
-      </div>
-      <div class="services-grid">
-
-        <!-- Drilling -->
-        <div class="service-card">
-          <div class="service-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L12 22"/><path d="M8 6 L16 6"/><path d="M9 10 L15 10"/><path d="M10 14 L14 14"/><path d="M7 18 Q12 22 17 18"/></svg>
-          </div>
-          <h3>Water Well Drilling</h3>
-          <p>New residential, agricultural, and commercial well drilling using advanced rotary and air-hammer rigs. Our network of certified drillers reaches proper aquifer depth — no shortcuts. Utah geology specialists statewide.</p>
-          <a href="pages/well-drilling.html" class="service-link">
-            Learn More
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-
-        <!-- Pump Services -->
-        <div class="service-card">
-          <div class="service-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-          </div>
-          <h3>Pump Installation & Repair</h3>
-          <p>Submersible and jet pump installation, replacement, and repair. Pressure tank sizing, variable-frequency drives, and smart pump controllers for maximum water system efficiency.</p>
-          <a href="pages/pump-services.html" class="service-link">
-            Learn More
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-
-        <!-- Well Inspection / Testing -->
-        <div class="service-card">
-          <div class="service-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          </div>
-          <h3>Well Inspection & Water Testing</h3>
-          <p>Camera video inspection of well casings, water quality testing for coliform bacteria, nitrates, minerals, and pH. Real estate well inspections with full written reports.</p>
-          <a href="pages/well-inspection.html" class="service-link">
-            Learn More
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-
-        <!-- Emergency -->
-        <div class="service-card emergency-card">
-          <div class="emergency-badge">24/7 Emergency</div>
-          <div class="service-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          </div>
-          <h3>Emergency Well Service</h3>
-          <p>No water? Broken pump? Contaminated well? We respond fast — day or night, weekends and holidays. Don't wait days without water. Call us now.</p>
-          <a href="pages/emergency.html" class="service-link" style="color:#FCA5A5;">
-            Get Emergency Help
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-
-        <!-- Permitting -->
-        <div class="service-card">
-          <div class="service-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="12" y2="17"/></svg>
-          </div>
-          <h3>Permit Assistance</h3>
-          <p>We guide you through every step of the Utah Division of Water Rights permitting process — water right applications, well permits, start cards, and final driller reports. No confusion, no runaround.</p>
-          <a href="pages/utah-well-guide.html" class="service-link">
-            See Full Guide
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-
-        <!-- Maintenance -->
-        <div class="service-card">
-          <div class="service-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-          </div>
-          <h3>Well Maintenance & Rehabilitation</h3>
-          <p>Declining water yield? Sediment or mineral buildup? We offer well rehabilitation including hydrofracturing, brushing, and chemical treatment to restore your well's full capacity.</p>
-          <a href="pages/well-maintenance.html" class="service-link">
-            Learn More
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Technology -->
-  <section class="section section--gray">
-    <div class="container">
-      <div class="tech-grid">
-        <div>
-          <span class="section-label">Our Technology</span>
-          <h2 class="section-title">The Most Advanced Equipment in the Industry</h2>
-          <p>Guesswork has no place in well drilling. The certified professionals in our network invest in cutting-edge technology — meaning faster drilling, more accurate placement, and better long-term results for your water supply.</p>
-          <div class="tech-list">
-            <div class="tech-item">
-              <div class="tech-num">1</div>
-              <div>
-                <h4>GPS-Guided Rig Positioning</h4>
-                <p>Precise drill site location using GPS surveying to comply with setback requirements and maximize aquifer access.</p>
-              </div>
-            </div>
-            <div class="tech-item">
-              <div class="tech-num">2</div>
-              <div>
-                <h4>Rotary & Air-Hammer Drilling Systems</h4>
-                <p>Multiple rig types for every Utah formation — from sand and gravel alluvial to hard Navajo sandstone, basalt, and the diverse geology across the state.</p>
-              </div>
-            </div>
-            <div class="tech-item">
-              <div class="tech-num">3</div>
-              <div>
-                <h4>Downhole Video Camera Inspection</h4>
-                <p>Full HD color camera inspections document casing integrity, screen condition, and aquifer entry points before and after work.</p>
-              </div>
-            </div>
-            <div class="tech-item">
-              <div class="tech-num">4</div>
-              <div>
-                <h4>Variable Frequency Drive (VFD) Pump Systems</h4>
-                <p>Smart pump controllers that reduce energy use by up to 60%, extend pump life, and maintain constant pressure automatically.</p>
-              </div>
-            </div>
-            <div class="tech-item">
-              <div class="tech-num">5</div>
-              <div>
-                <h4>Geophysical Logging & Aquifer Analysis</h4>
-                <p>Electronic well logging tools measure formation resistivity, natural gamma, and caliper data to identify the most productive zones.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tech-visual">
-          <div class="tech-stat-card">
-            <div>
-              <div class="t-num">1,200+</div>
-              <div class="t-label">Max Drill Depth (ft)</div>
-            </div>
-          </div>
-          <div class="tech-stat-card">
-            <div>
-              <div class="t-num">60%</div>
-              <div class="t-label">Energy Savings with VFD Systems</div>
-            </div>
-          </div>
-          <div class="tech-stat-card">
-            <div>
-              <div class="t-num">4K</div>
-              <div class="t-label">Camera Resolution for Well Inspection</div>
-            </div>
-          </div>
-          <div class="tech-stat-card">
-            <div>
-              <div class="t-num">100%</div>
-              <div class="t-label">Driller Reports Filed with State</div>
-            </div>
-          </div>
-          <div style="margin-top:1rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1);">
-            <p style="color:rgba(255,255,255,0.65); font-size:0.85rem; margin-bottom:1rem;">Our network's equipment is fully maintained and permitted across all Utah counties.</p>
-            <a href="pages/technology.html" class="btn btn-primary" style="width:100%; justify-content:center;">View All Technology</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- How It Works -->
-  <section class="section">
+  <section class="hiw">
     <div class="container">
-      <div class="text-center">
-        <span class="section-label">The Process</span>
-        <h2 class="section-title">From First Call to Clean Water</h2>
-        <p class="section-sub">We make the well drilling and installation process straightforward. Here's what to expect when you connect through Utah Water Well Alliance.</p>
-      </div>
-      <div class="process-steps">
-        <div class="process-step">
-          <div class="step-circle">1</div>
-          <h4>Free Consultation</h4>
-          <p>We assess your property, water needs, and local geology to recommend the right solution.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-circle">2</div>
-          <h4>Permit & Water Right</h4>
-          <p>We assist with your Utah DWRi well permit application and guide you to your Start Card.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-circle">3</div>
-          <h4>Site Preparation</h4>
-          <p>GPS siting, access prep, and equipment mobilization — all handled professionally.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-circle">4</div>
-          <h4>Drilling & Casing</h4>
-          <p>Your matched certified driller reaches the aquifer, installs steel or PVC casing, and seals to state specs.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-circle">5</div>
-          <h4>Pump & System Install</h4>
-          <p>Submersible pump, pressure tank, and controls installed and tested by your local certified professional.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-circle">6</div>
-          <h4>Water Testing & Report</h4>
-          <p>Complete water quality testing, driller's report filed with the state, and you have water.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div class="hiw-label">How It Works</div>
+      <h2 class="hiw-title">We Make It Simple.</h2>
+      <div class="section-rule"></div>
+      <div class="hiw-grid">
 
-  <!-- Permit Guide Preview -->
-  <section class="section section--navy">
-    <div class="container">
-      <div class="guide-grid">
-        <div>
-          <span class="section-label" style="color:var(--orange-light)">Utah Well Permit Guide</span>
-          <h2 class="section-title">How to Get a Water Well Permit in Utah</h2>
-          <p style="color:rgba(255,255,255,0.75); margin-bottom:2rem;">Navigating the Utah Division of Water Rights process can be confusing. We've broken it down into clear steps — and we can handle most of it for you.</p>
-          <div class="guide-steps">
-            <div class="guide-step">
-              <div class="step-badge">1</div>
-              <div>
-                <h4>Verify Your Water Right</h4>
-                <p>Search the Utah DWRi database to check existing rights on your parcel before applying.</p>
-              </div>
-            </div>
-            <div class="guide-step">
-              <div class="step-badge">2</div>
-              <div>
-                <h4>Apply for a Water Right</h4>
-                <p>File an "Application to Appropriate Water" if no right exists. Domestic use ≤0.5 acre-feet may qualify for an expedited domestic exemption.</p>
-              </div>
-            </div>
-            <div class="guide-step">
-              <div class="step-badge">3</div>
-              <div>
-                <h4>File Your Well Permit Application</h4>
-                <p>Submit a well permit application through the Utah Division of Water Rights online portal with your licensed driller's information.</p>
-              </div>
-            </div>
-            <div class="guide-step">
-              <div class="step-badge">4</div>
-              <div>
-                <h4>Receive Your Start Card</h4>
-                <p>Once approved, you receive your Authorization to Construct (Start Card) — this must be posted at your drill site. Drilling cannot begin without it.</p>
-              </div>
-            </div>
-            <div class="guide-step">
-              <div class="step-badge">5</div>
-              <div>
-                <h4>Drill & File Driller's Report</h4>
-                <p>Your licensed driller completes the well and files a Driller's Report with the state within 30 days of completion.</p>
-              </div>
-            </div>
+        <div class="hiw-step">
+          <div class="hiw-num">1</div>
+          <div class="hiw-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           </div>
-          <a href="pages/utah-well-guide.html" class="btn btn-primary" style="margin-top:2rem;">Read the Full Guide</a>
+          <h4>Tell Us About<br>Your Property</h4>
+          <p>Share a few details about your land and your plans — we handle the rest.</p>
         </div>
-        <div class="guide-info-box">
-          <h3>Important Utah Well Facts</h3>
-          <ul class="info-list">
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              All wells must be drilled by a <strong>Utah State licensed well driller</strong>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              The <strong>Start Card</strong> (Authorization to Construct) must be posted on-site before drilling begins
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Domestic wells (≤0.5 acre-feet/year) may qualify for a <strong>simplified domestic exemption</strong>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Well permits typically cost <strong>$75–$150</strong> in state fees
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Start Cards are valid for <strong>2 years</strong> from date of issue
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              A Driller's Report must be filed within <strong>30 days</strong> of well completion
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Wells must be set back <strong>at least 100 feet</strong> from septic systems and 50 feet from property lines
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Washington County aquifers are heavily managed — <strong>apply early</strong>
-            </li>
-          </ul>
-          <div style="margin-top:1.75rem; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,0.12);">
-            <p style="color:rgba(255,255,255,0.7); font-size:0.88rem; margin-bottom:1rem;">We handle the permit process for you. Let our team guide you from application to Start Card.</p>
-            <a href="pages/contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">Get Permit Help</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Service Areas -->
-  <section class="section section--gray">
-    <div class="container">
-      <div class="text-center">
-        <span class="section-label">Where We Work</span>
-        <h2 class="section-title">Serving All of Utah</h2>
-        <p class="section-sub">Utah Water Well Alliance connects homeowners and landowners with certified local well drilling professionals in every region of the state — from Salt Lake City to St. George, Logan to Moab.</p>
-      </div>
-      <div class="areas-grid">
-        <a href="pages/areas/salt-lake-city-ut.html" class="area-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Salt Lake City
-        </a>
-        <a href="pages/areas/provo-ut.html" class="area-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Provo
-        </a>
-        <a href="pages/areas/ogden-ut.html" class="area-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Ogden
-        </a>
-        <a href="pages/areas/logan-ut.html" class="area-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Logan
-        </a>
-        <a href="pages/areas/lehi-ut.html" class="area-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Lehi
-        </a>
-        <a href="pages/areas/park-city-ut.html" class="area-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Park City
-        </a>
-        <a href="pages/areas/tooele-ut.html" class="area-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Tooele
-        </a>
-        <a href="pages/areas/vernal-ut.html" class="area-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Vernal
-        </a>
-        <a href="pages/areas/moab-ut.html" class="area-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Moab
-        </a>
-        <a href="pages/areas/cedar-city-ut.html" class="area-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Cedar City
-        </a>
-        <a href="pages/areas/st-george-ut.html" class="area-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          St. George
-        </a>
-        <a href="pages/areas/richfield-ut.html" class="area-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Richfield
-        </a>
-        <a href="pages/areas/kanab-ut.html" class="area-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Kanab
-        </a>
-        <a href="pages/areas/price-ut.html" class="area-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Price
-        </a>
-        <a href="pages/areas/nephi-ut.html" class="area-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Nephi
-        </a>
-        <a href="pages/service-areas.html" class="area-pill" style="background:var(--navy); color:white; border-color:var(--navy);">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          All Areas
-        </a>
+        <div class="hiw-step">
+          <div class="hiw-num">2</div>
+          <div class="hiw-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h4>We Review Water<br>Rights &amp; Location</h4>
+          <p>We check availability, rules, and what's possible at your property.</p>
+        </div>
+
+        <div class="hiw-step">
+          <div class="hiw-num">3</div>
+          <div class="hiw-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h4>Get Connected With<br>a Certified Driller</h4>
+          <p>We match you with trusted, licensed professionals in your area.</p>
+        </div>
+
+        <div class="hiw-step">
+          <div class="hiw-num">4</div>
+          <div class="hiw-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="6" height="18" rx="1"/><rect x="9" y="8" width="5" height="13" rx="1"/><rect x="17" y="1" width="5" height="20" rx="1"/></svg>
+          </div>
+          <h4>Start Your<br>Well Project</h4>
+          <p>From permits to drilling and pumps — we guide you through every step.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- Why Choose Us -->
-  <section class="section">
+  <section class="why-dark">
     <div class="container">
       <div class="text-center">
-        <span class="section-label">Why Us</span>
-        <h2 class="section-title">The Utah Water Well Alliance Difference</h2>
-        <p class="section-sub">There are hundreds of well drillers in Utah. Here's why property owners statewide trust Utah Water Well Alliance to connect them with the right one.</p>
+        <span class="section-label" style="color:#fbbf24;">Why Landowners Choose Us</span>
+        <h2 class="section-title" style="color:#fff;">Your Trusted Partner from Start to Finish.</h2>
+        <div class="section-rule"></div>
       </div>
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h4>Our Network Is Licensed & Insured</h4>
-          <p>Every professional we connect you with is licensed by the Utah Division of Water Rights and carries full liability and workers' comp coverage.</p>
+      <div class="why-dark-grid">
+        <div class="why-dark-card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <h4>Trusted Statewide Network</h4>
+          <p>We only work with licensed, reputable professionals vetted and certified by the State of Utah.</p>
         </div>
-        <div class="why-card">
-          <div class="why-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h4>24/7 Emergency Response</h4>
-          <p>We answer the phone when you need us most — nights, weekends, and holidays. No water is a true emergency. We treat it that way.</p>
+        <div class="why-dark-card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <h4>Water Rights Guidance</h4>
+          <p>We help you understand what's required for your property before a single permit is filed.</p>
         </div>
-        <div class="why-card">
-          <div class="why-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <h4>Utah Well Specialists</h4>
-          <p>Our network knows Utah's geology — from the Wasatch Front to the Colorado Plateau, Uinta Basin to the Virgin River Valley. Local expertise in every region means better wells and fewer surprises.</p>
+        <div class="why-dark-card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/></svg>
+          <h4>Permits Made Simple</h4>
+          <p>We guide you through Utah's Division of Water Rights process — no confusion, no runaround.</p>
         </div>
-        <div class="why-card">
-          <div class="why-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-          <h4>Transparent, Flat-Rate Pricing</h4>
-          <p>No surprise invoices. We provide written estimates before we start. If conditions change, we tell you before we proceed — not after.</p>
+        <div class="why-dark-card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <h4>Multiple Quotes Available</h4>
+          <p>Compare options and choose the right fit for your needs and budget — no pressure, no lock-in.</p>
         </div>
-        <div class="why-card">
-          <div class="why-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <h4>Latest Equipment & Methods</h4>
-          <p>Our modern drill rigs, camera systems, and VFD pump controls deliver better results than outdated equipment — and we prove it with data.</p>
+        <div class="why-dark-card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <h4>No Obligation Consultation</h4>
+          <p>Get answers and advice — no pressure, ever. Informed landowners make better decisions.</p>
         </div>
-        <div class="why-card">
-          <div class="why-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h4>Permit Process Guidance</h4>
-          <p>We walk you through every step of Utah's water right and well permit process. Most customers never have to visit a state office.</p>
+        <div class="why-dark-card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <h4>Save Time &amp; Avoid Mistakes</h4>
+          <p>Mistakes in permitting or well placement are expensive. We help you do it right the first time.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="section section--gray">
+  <!-- Cost Section -->
+  <section class="cost-sec">
+    <div class="container">
+      <div class="cost-grid">
+        <div>
+          <div class="cost-eyebrow">What Will My Well Cost?</div>
+          <div class="cost-title">Average Utah Well</div>
+          <div class="cost-range">$18,000 – $40,000</div>
+          <div class="cost-factors-label">Final cost depends on:</div>
+          <ul class="cost-factor-list">
+            <li>Well depth</li>
+            <li>Pump &amp; equipment</li>
+            <li>Location &amp; geology</li>
+            <li>Storage &amp; pressure system</li>
+          </ul>
+          <a href="pages/contact.html" class="btn btn-primary">Request a Free Estimate</a>
+          <p style="font-size:0.78rem;color:#9aa5be;margin-top:0.5rem;">No obligation. Fast response.</p>
+        </div>
+        <div class="cost-visual">
+          <p class="cost-visual-note">Our network provides transparent, written estimates before any work begins.</p>
+          <div class="cost-stat">
+            <div class="big">29 Counties</div>
+            <div class="small">Served Across Utah</div>
+          </div>
+          <div class="cost-stat">
+            <div class="big">500+</div>
+            <div class="small">Landowners Helped</div>
+          </div>
+          <div class="cost-stat">
+            <div class="big">24/7</div>
+            <div class="small">Emergency Response</div>
+          </div>
+          <svg class="cost-visual-mtn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" preserveAspectRatio="none">
+            <path d="M0,80 L0,50 L70,20 L140,42 L210,8 L280,38 L340,14 L400,32 L400,80 Z" fill="white"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resource Cards -->
+  <section class="resources">
     <div class="container">
       <div class="text-center">
-        <span class="section-label">Customer Reviews</span>
-        <h2 class="section-title">What Utah Homeowners Are Saying</h2>
+        <span class="section-label">Everything Utah Landowners Need to Know</span>
+        <h2 class="section-title">Answers. Guidance. Peace of Mind.</h2>
+        <div class="section-rule"></div>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"We had no water on a Sunday morning. Utah Water Well Alliance had a technician at our property within 3 hours. Our pump was replaced by noon. Incredible response time and professional service."</p>
-          <div class="testimonial-author">
-            <strong>Dave &amp; Karen M.</strong>
-            <span>Hurricane, Washington County</span>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"I was completely lost on how to get a well permit for my rural property outside Cedar City. They walked me through every form, got my Start Card faster than I expected, and drilled a perfect well. Total pros."</p>
-          <div class="testimonial-author">
-            <strong>Robert T.</strong>
-            <span>Iron County</span>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"The VFD pump system they installed cut my electricity bill noticeably. The constant-pressure system is night and day from my old pump. Best money I've spent on my property."</p>
-          <div class="testimonial-author">
-            <strong>Lisa H.</strong>
-            <span>St. George, UT</span>
-          </div>
-        </div>
+      <div class="resource-grid">
+
+        <a href="pages/utah-well-guide.html" class="resource-card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <h4>Water Rights</h4>
+          <p>Understand your rights and what's required to drill a well in Utah.</p>
+          <span class="resource-more">Learn More →</span>
+        </a>
+
+        <a href="pages/utah-well-guide.html" class="resource-card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <h4>Permits</h4>
+          <p>What permits you need and how we help you get them fast.</p>
+          <span class="resource-more">Learn More →</span>
+        </a>
+
+        <a href="pages/well-drilling.html" class="resource-card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <h4>Well Costs</h4>
+          <p>Detailed breakdown of costs and what affects pricing in Utah.</p>
+          <span class="resource-more">Learn More →</span>
+        </a>
+
+        <a href="pages/utah-well-guide.html" class="resource-card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <h4>How Long Does It Take?</h4>
+          <p>Timelines for drilling, permitting, and installation in Utah.</p>
+          <span class="resource-more">Learn More →</span>
+        </a>
+
+        <a href="pages/utah-well-guide.html" class="resource-card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          <h4>Choosing a Driller</h4>
+          <p>How to choose the right licensed professional for your project.</p>
+          <span class="resource-more">Learn More →</span>
+        </a>
+
+        <a href="pages/well-drilling.html" class="resource-card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="2" x2="12" y2="22"/><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+          <h4>Well Depth</h4>
+          <p>How deep are wells in Utah? What to expect by region and geology.</p>
+          <span class="resource-more">Learn More →</span>
+        </a>
+
+        <a href="pages/emergency.html" class="resource-card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <h4>Emergency Repairs</h4>
+          <p>24/7 help for pump failures, broken casings, and well emergencies.</p>
+          <span class="resource-more">Learn More →</span>
+        </a>
+
+        <a href="pages/well-maintenance.html" class="resource-card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <h4>Well Maintenance</h4>
+          <p>Annual care, rehabilitation, and what to watch for to extend your well's life.</p>
+          <span class="resource-more">Learn More →</span>
+        </a>
+
       </div>
     </div>
   </section>
 
-  <!-- CTA Strip -->
-  <section style="background:var(--navy); padding:3rem 0;">
-    <div class="container" style="text-align:center;">
-      <h2 style="color:white; margin-bottom:0.5rem;">Ready to Get Started?</h2>
-      <p style="color:rgba(255,255,255,0.75); margin-bottom:1.5rem;">Fill out the quick quote form at the top of this page, or call us now.</p>
-      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-        <a href="#contact" class="btn btn-primary btn-lg">Get a Free Quote</a>
-        <a href="tel:+14355002479" class="btn btn-secondary btn-lg" data-phone>(435) 500-2479</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
+  <!-- CTA Banner -->
+  <section class="cta-banner">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="site-logo" style="margin-bottom:0.75rem;">
-            <img src="images/logo.png" alt="Utah Water Well Alliance" style="width:70px;height:70px;border-radius:50%;object-fit:contain;flex-shrink:0;">
-            <div class="logo-text">
-              <span class="logo-main">Utah Water Well Alliance</span>
-              <span class="logo-sub">We Help Utah Get Water</span>
+      <div class="cta-banner-inner">
+        <div>
+          <h2>Ready to Get Water on Your Property?</h2>
+          <p>You don't have to figure it out alone. Our team is here to answer your questions and connect you with the right well professional.</p>
+        </div>
+        <div class="cta-banner-btns">
+          <a href="tel:+14355002479" class="btn btn-primary btn-lg" data-phone>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.45 2 2 0 0 1 3.57 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Talk to a Well Expert
+          </a>
+          <a href="pages/contact.html" class="btn-ghost-white" style="justify-content:center;text-align:center;">
+            Get My Free Well Plan
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer V2 -->
+  <footer class="footer-v2">
+    <div class="container">
+      <div class="footer-v2-grid">
+
+        <!-- Brand -->
+        <div class="fv2-brand">
+          <a href="index.html" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none;margin-bottom:0.25rem;">
+            <img src="images/logo.png" alt="Utah Water Well Alliance" style="width:50px;height:50px;border-radius:50%;object-fit:contain;flex-shrink:0;">
+            <div>
+              <div style="color:#fff;font-family:Georgia,serif;font-size:0.95rem;font-weight:600;line-height:1.3;">Utah Water Well Alliance</div>
+              <div style="color:var(--gold);font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;">We Help Utah Get Water</div>
             </div>
           </a>
-          <p>Utah Water Well Alliance connects landowners and homeowners with certified, trusted water well professionals across all of Utah. Permits, drilling, pump installation, and 24/7 emergency service.</p>
-          <a href="tel:+14355002479" class="footer-phone">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.45 2 2 0 0 1 3.57 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <span data-phone>(435) 500-2479</span>
-          </a>
+          <p>Your trusted guide for water wells in Utah. Connecting landowners with licensed professionals statewide.</p>
+          <div class="fv2-social">
+            <a href="#" aria-label="Facebook">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="#0b1e3d" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            </a>
+          </div>
         </div>
-        <div class="footer-col">
-          <h4>Services</h4>
+
+        <!-- Quick Links -->
+        <div>
+          <h4>Quick Links</h4>
           <ul>
-            <li><a href="pages/well-drilling.html">Well Drilling</a></li>
-            <li><a href="pages/pump-services.html">Pump Installation & Repair</a></li>
-            <li><a href="pages/well-inspection.html">Well Inspection</a></li>
-            <li><a href="pages/emergency.html">Emergency Service</a></li>
-            <li><a href="pages/well-maintenance.html">Well Maintenance</a></li>
-            <li><a href="pages/technology.html">Our Technology</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="pages/utah-well-guide.html">Utah Well Permit Guide</a></li>
-            <li><a href="pages/utah-well-guide.html#start-card">How to Get a Start Card</a></li>
-            <li><a href="pages/utah-well-guide.html#water-right">Water Right Applications</a></li>
-            <li><a href="pages/blog.html">Well Drilling Blog</a></li>
+            <li><a href="pages/contact.html">Get Started</a></li>
+            <li><a href="pages/well-drilling.html">Well Cost</a></li>
+            <li><a href="pages/utah-well-guide.html">Water Rights</a></li>
+            <li><a href="pages/blog.html">Resources</a></li>
             <li><a href="pages/faq.html">FAQs</a></li>
-            <li><a href="pages/service-areas.html">Service Areas</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>Top Areas</h4>
+
+        <!-- Service Areas -->
+        <div>
+          <h4>Service Areas</h4>
           <ul>
-            <li><a href="pages/areas/salt-lake-city-ut.html">Salt Lake City, UT</a></li>
-            <li><a href="pages/areas/provo-ut.html">Provo, UT</a></li>
-            <li><a href="pages/areas/ogden-ut.html">Ogden, UT</a></li>
-            <li><a href="pages/areas/st-george-ut.html">St. George, UT</a></li>
-            <li><a href="pages/areas/cedar-city-ut.html">Cedar City, UT</a></li>
-            <li><a href="pages/areas/moab-ut.html">Moab, UT</a></li>
+            <li><a href="pages/areas/st-george-ut.html">St. George</a></li>
+            <li><a href="pages/areas/cedar-city-ut.html">Cedar City</a></li>
+            <li><a href="pages/areas/salt-lake-city-ut.html">Salt Lake City</a></li>
+            <li><a href="pages/areas/provo-ut.html">Provo</a></li>
+            <li><a href="pages/service-areas.html">All of Utah</a></li>
           </ul>
         </div>
+
+        <!-- Company -->
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="pages/contact.html">About Us</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+            <li><a href="pages/emergency.html">Emergency Support</a></li>
+            <li><a href="pages/privacy.html">Privacy Policy</a></li>
+            <li><a href="pages/terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Phone -->
+        <div class="fv2-phone">
+          <h4>Talk to a Well Expert</h4>
+          <div class="ph-label">Call or text anytime</div>
+          <a href="tel:+14355002479" class="ph-num" data-phone>(435) 500-2479</a>
+          <div class="ph-avail">Available 24/7</div>
+          <a href="pages/contact.html" class="btn btn-primary" style="width:100%;justify-content:center;font-size:0.85rem;">Get My Free Well Plan</a>
+        </div>
+
       </div>
-      <div class="footer-bottom">
+
+      <div class="footer-v2-bottom">
         <div>&copy; 2025 Utah Water Well Alliance LLC. All rights reserved.</div>
-        <div class="footer-license">Connecting Utah Homeowners with Licensed Well Drilling Professionals Statewide</div>
-        <div style="display:flex; gap:1.5rem;">
+        <div style="display:flex;gap:1.5rem;">
           <a href="pages/privacy.html">Privacy Policy</a>
-          <a href="pages/terms.html">Terms of Use</a>
+          <a href="pages/terms.html">Terms of Service</a>
           <a href="pages/contact.html">Contact</a>
         </div>
       </div>
     </div>
   </footer>
 
+  <script>
+    // Resources dropdown keyboard / touch support
+    document.querySelectorAll('.nav-drop > a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        var menu = this.nextElementSibling;
+        if (!menu) return;
+        if (window.innerWidth <= 960) {
+          e.preventDefault();
+          var open = menu.style.display === 'block';
+          menu.style.display = open ? '' : 'block';
+        }
+      });
+    });
+    // Close dropdown on outside click
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.nav-drop')) {
+        document.querySelectorAll('.drop-menu').forEach(function(m) { m.style.display = ''; });
+      }
+    });
+  </script>
   <script src="js/main.js"></script>
 </body>
 </html>
